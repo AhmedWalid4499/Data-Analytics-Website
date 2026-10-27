@@ -1,3 +1,4 @@
+import os
 from cs_common import build_cheatsheet
 
 S = [
@@ -165,7 +166,7 @@ S = [
 ]
 
 build_cheatsheet(
-    "/mnt/user-data/outputs/Power-Automate-Cheat-Sheet.pdf",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "docs", "Power-Automate-Cheat-Sheet.pdf"),
     "Power Automate Cheat Sheet",
     "Flows, controls & expressions  ·  DPM Learning Hub",
     S,

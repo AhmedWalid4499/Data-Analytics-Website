@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Excel Formula & Function Cheat Sheet — Posit/RStudio-style reference card (2-page, 3-column).
+import os
 from reportlab.lib.pagesizes import letter, landscape
 from reportlab.lib.units import inch
 from reportlab.lib import colors
@@ -9,7 +10,7 @@ from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT
 
-OUT = "/mnt/user-data/outputs/Excel-Formula-Cheat-Sheet.pdf"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "docs", "Excel-Formula-Cheat-Sheet.pdf")
 
 GREEN = colors.HexColor("#217346"); DARK = colors.HexColor("#14233A")
 INK = colors.HexColor("#26323F"); MUTED = colors.HexColor("#6B7280")

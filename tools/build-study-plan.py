@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # DPM Learning Hub — 12-Week Study Plan (printable PDF planner).
+import os
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors
@@ -8,7 +9,7 @@ from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_LEFT
 
-OUT = "/mnt/user-data/outputs/DPM-12-Week-Study-Plan.pdf"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "docs", "DPM-12-Week-Study-Plan.pdf")
 
 NAVY = colors.HexColor("#14233A"); ACCENT = colors.HexColor("#FF7900")
 INK = colors.HexColor("#26323F"); MUTED = colors.HexColor("#6B7280")

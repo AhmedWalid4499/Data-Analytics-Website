@@ -1,296 +1,282 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Power BI — DPM Learning Hub</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body data-theme="powerbi">
-<div class="scrollbar"></div>
+# DPM Learning Hub
 
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="dot"></span> DPM Learning Hub</a>
-  <button class="menu-btn" aria-label="Menu">☰</button>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="data-foundations.html">Foundations</a>
-    <a href="excel.html">Excel</a>
-    <a href="sql.html">SQL</a>
-    <a href="powerbi.html" aria-current="page">Power BI</a>
-    <a href="powerautomate.html">Power Automate</a>
-    <a href="courses.html">Courses</a>
-    <a href="downloads.html">Downloads</a>
-  </div>
-</div></nav>
+A self-contained training site for new **Delivery Project Managers (DPMs)** at Orange Business. It teaches the data tools a DPM uses day to day — Excel, SQL, Power BI and Power Automate — plus the data-modelling foundations underneath them. Every track combines short tabbed lessons, hands-on practice (live formula/query runners), a graded randomised exam, and a printable cheat sheet. A **Live Dashboard** capstone shows where it all leads, and site-wide **search**, **progress tracking** and **dark mode** make it easy to find your way.
 
-<header class="hero"><div class="wrap">
-  <span class="tool-badge"><span class="glyph" style="color:#1a1a1a">▮</span> Microsoft Power BI</span>
-  <h1>Turn the same data<br>into a dashboard<br>people act on.</h1>
-  <p class="lead">Power BI takes the workbook you've been using and makes it interactive: relationships between tables, calculations that respond to clicks, and visuals chosen on purpose. This track follows the real build order — get data, shape it, model it, write DAX, then visualize.</p>
-  <div class="pills" style="margin-top:22px">
-    <a class="dl" href="assets/data/dpm_projects.xlsx" download>⬇ Sample workbook (.xlsx)</a>
-    <a class="dl ghost" href="assets/data/dpm_projects.csv" download>⬇ CSV</a>
-  </div>
-  <p class="hint" style="color:var(--muted);font-size:.9rem;margin-top:14px">Get it free: install <strong>Power BI Desktop</strong> from the Microsoft Store, then <em>Get Data ▸ Excel</em> and pick the Projects sheet.</p>
-</div></header>
+It is a **static website**: plain HTML, CSS and vanilla JavaScript. There is **no build step, no framework and no backend** — it runs by opening the files in a browser and is hosted on GitHub Pages.
 
-<!-- DOWNLOAD -->
-<section><div class="wrap">
-  <div class="card" style="border-left:4px solid var(--accent);display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-    <div style="flex:1 1 340px">
-      <h3 style="margin:0 0 .3em">Grab the printable cheat sheet</h3>
-      <p style="margin:0;color:var(--ink-soft)">A dense, two-page Power BI &amp; DAX reference — modelling, CALCULATE and filter context, time intelligence, the chart chooser and performance tips — in the style of the classic R/RStudio cards.</p>
-    </div>
-    <a class="btn" href="assets/docs/DAX-PowerBI-Cheat-Sheet.pdf" download>⬇ Download cheat sheet (PDF)</a>
-  </div>
-</div></section>
+🔗 **Live site:** https://ahmedwalid4499.github.io
 
-<!-- LESSONS BY LEVEL -->
-<section><div class="wrap">
-  <span class="eyebrow">Power BI by level</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .2em">Learn it in the build order</h2>
-  <p class="lead">Power BI follows a pipeline: get data, shape it, model it, write DAX, then visualize. This track is split into <strong>three levels</strong> — tap any card to switch. Each lesson has worked examples on the sample workbook and a task to try before you reveal the answer.</p>
-  <div class="tiers" data-tiers="p" role="tablist">
-    <button class="tier-btn" data-tier="basic" aria-selected="true" role="tab"><span class="lvl">1</span><span class="tier-txt"><b>Basics</b><small>What it is &amp; getting data</small></span></button>
-    <button class="tier-btn" data-tier="inter" aria-selected="false" role="tab"><span class="lvl">2</span><span class="tier-txt"><b>Intermediate</b><small>Model &amp; visualize</small></span></button>
-    <button class="tier-btn" data-tier="adv" aria-selected="false" role="tab"><span class="lvl">3</span><span class="tier-txt"><b>Advanced</b><small>DAX — the calculation language</small></span></button>
-  </div>
+---
 
-  <div data-tier-panel="p" data-tier="basic" class="tier-panel active">
-    <details class="lesson open"><summary><span class="caret">▸</span><span class="fn">Orientation</span> Desktop, Service &amp; the build order <span class="tag">Basics</span></summary>
-    <div class="body">
-<div class="grid cols-2">
-    <div class="card"><h3>Desktop vs Service</h3><p><strong>Power BI Desktop</strong> (free, on your PC) is where you build. <strong>Power BI Service</strong> (powerbi.com) is where you <em>publish</em> so others can view and where scheduled refresh lives.</p></div>
-    <div class="card"><h3>The three things you'll make</h3><p>A <strong>semantic model</strong> (the data + relationships + measures), <strong>reports</strong> (interactive multi-visual pages), and <strong>dashboards</strong> (pinned highlights, Service-only).</p></div>
-  </div>
-  <h3 style="margin-top:34px">The build order — every report follows this</h3>
-  <div class="flow">
-    <div class="step"><b>1 · GET DATA</b> Connect to the Excel/CSV/web/SQL source</div><div class="conn"></div>
-    <div class="step"><b>2 · TRANSFORM</b> Clean &amp; shape it in Power Query (same engine as Excel)</div><div class="conn"></div>
-    <div class="step"><b>3 · MODEL</b> Create relationships between tables, set data types</div><div class="conn"></div>
-    <div class="step"><b>4 · DAX</b> Write measures &amp; calculated columns</div><div class="conn"></div>
-    <div class="step"><b>5 · VISUALIZE</b> Choose visuals, add slicers, arrange the page</div><div class="conn"></div>
-    <div class="step"><b>6 · PUBLISH</b> Push to the Service, schedule refresh, share</div>
-  </div>
-    </div></details>
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Power Query</span> Get &amp; shape the data <span class="tag">Basics</span></summary>
-    <div class="body">
-<p class="lead">It's the <em>same</em> Power Query as Excel — Home ▸ Transform data. This is where you manipulate columns and rows before anything reaches a chart.</p>
-  <table class="tbl">
-    <thead><tr><th>You want to…</th><th>Do this</th></tr></thead>
-    <tbody>
-      <tr><td>Remove or reorder columns</td><td>Right-click the header ▸ Remove / drag to reorder</td></tr>
-      <tr><td>Rename a column</td><td>Double-click the header</td></tr>
-      <tr><td>Set a data type</td><td>Click the type icon on the header (text / whole number / date)</td></tr>
-      <tr><td>Filter rows out</td><td>Header dropdown ▸ uncheck values, or Remove Rows</td></tr>
-      <tr><td>Add a calculated column</td><td>Add Column ▸ Custom Column (a one-off, computed during load)</td></tr>
-      <tr><td>Split / merge columns</td><td>Transform ▸ Split Column / Merge Columns</td></tr>
-      <tr><td>Reshape wide ↔ tall</td><td>Transform ▸ Unpivot (wide→tall) / Pivot (tall→wide)</td></tr>
-      <tr><td>Combine tables</td><td>Merge (join on a key) or Append (stack)</td></tr>
-    </tbody>
-  </table>
-  <div class="note"><span class="ic">i</span><div><strong>Rule of thumb:</strong> shape and clean in Power Query; <em>calculate</em> business logic in DAX. Adding a column in Power Query bakes it into the data; a DAX measure recalculates live as users filter.</div></div>
-    </div></details>
-  </div>
+## Table of contents
 
-  <div data-tier-panel="p" data-tier="inter" class="tier-panel">
-    <details class="lesson open"><summary><span class="caret">▸</span><span class="fn">Data model</span> Relationships &amp; the star schema <span class="tag">Model</span></summary>
-    <div class="body">
-<p class="lead">In the Model view you connect tables so a filter on one flows to another. The clean pattern is a <strong>star schema</strong>: one central <em>fact</em> table of events surrounded by <em>dimension</em> tables that describe them.</p>
-  <div class="grid cols-2">
-    <div class="card"><h3>Fact table</h3><p>The events you measure — here, the <strong>Projects</strong> rows (each order, with revenue, FTE, dates). Lots of rows, mostly numbers and keys.</p></div>
-    <div class="card"><h3>Dimension tables</h3><p>The descriptors you slice by — a <strong>Date</strong> table, a <strong>Customer</strong> table, a <strong>Region</strong> table. Fewer rows, used for filtering and grouping.</p></div>
-  </div>
-  <div class="note"><span class="ic">★</span><div>Almost always add a dedicated <strong>Date table</strong> and relate it to your date column. Time-intelligence DAX (YTD, prior month) depends on it.</div></div>
-    </div></details>
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Chart chooser</span> Pick the visual by the question <span class="tag">Visualize</span></summary>
-    <div class="body">
-<p class="lead">A chart's job is to make one comparison obvious. Pick by the <em>question</em> you're answering — not by what looks fanciest. Here's when each earns its place, and when it misleads.</p>
+- [Who it's for](#who-its-for)
+- [Quick start](#quick-start)
+- [Site map](#site-map)
+- [Repository structure](#repository-structure)
+- [Anatomy of a track page](#anatomy-of-a-track-page)
+- [Interactive components](#interactive-components)
+- [Downloadable documents](#downloadable-documents)
+- [Design system](#design-system)
+- [Editing &amp; extending](#editing--extending)
+- [Validating changes](#validating-changes)
+- [Deployment](#deployment)
+- [Tech stack](#tech-stack)
+- [Roadmap](#roadmap)
 
-  <div class="viz-grid" style="margin-top:24px">
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><g fill="var(--accent)"><rect x="6" y="40" width="16" height="26"/><rect x="30" y="22" width="16" height="44"/><rect x="54" y="30" width="16" height="36"/><rect x="78" y="14" width="16" height="52"/><rect x="102" y="48" width="14" height="18"/></g></svg>
-      <h4>Bar / Column</h4>
-      <p class="when"><strong>Use for:</strong> comparing a value across categories (revenue by customer, orders by region). The default, and usually the right answer. Bars (horizontal) suit long category names.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><polyline fill="none" stroke="var(--accent)" stroke-width="3" points="6,52 30,40 54,46 78,22 102,28 114,14"/><g fill="var(--accent)"><circle cx="6" cy="52" r="3"/><circle cx="30" cy="40" r="3"/><circle cx="54" cy="46" r="3"/><circle cx="78" cy="22" r="3"/><circle cx="102" cy="28" r="3"/><circle cx="114" cy="14" r="3"/></g></svg>
-      <h4>Line</h4>
-      <p class="when"><strong>Use for:</strong> a trend over time (orders per month, revenue by quarter). Continuous time on the X axis. Don't use a line for unordered categories.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><g><rect x="14" y="20" width="20" height="46" fill="var(--accent)"/><rect x="14" y="8" width="20" height="12" fill="var(--muted)"/><rect x="50" y="30" width="20" height="36" fill="var(--accent)"/><rect x="50" y="14" width="20" height="16" fill="var(--muted)"/><rect x="86" y="38" width="20" height="28" fill="var(--accent)"/><rect x="86" y="26" width="20" height="12" fill="var(--muted)"/></g></svg>
-      <h4>Stacked column</h4>
-      <p class="when"><strong>Use for:</strong> a total <em>and</em> its parts (revenue per region split by service). Great for the total; hard to compare the middle segments — use 100% stacked if proportion is the point.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><circle cx="60" cy="35" r="28" fill="none" stroke="var(--muted)" stroke-width="14"/><circle cx="60" cy="35" r="28" fill="none" stroke="var(--accent)" stroke-width="14" stroke-dasharray="110 176" transform="rotate(-90 60 35)"/></svg>
-      <h4>Pie / Donut</h4>
-      <p class="when"><strong>Use sparingly:</strong> one part-to-whole split with 2–4 slices (Delivered vs not). <strong>Avoid</strong> with many slices or for comparing similar sizes — a bar chart is clearer almost every time.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><g fill="var(--accent)"><circle cx="20" cy="50" r="4"/><circle cx="40" cy="40" r="4"/><circle cx="55" cy="44" r="4"/><circle cx="70" cy="28" r="4"/><circle cx="85" cy="33" r="4"/><circle cx="100" cy="18" r="4"/><circle cx="48" cy="55" r="4"/><circle cx="92" cy="40" r="4"/></g></svg>
-      <h4>Scatter</h4>
-      <p class="when"><strong>Use for:</strong> relationship between two numbers (FTE days vs revenue) and spotting outliers. Add a third measure as bubble size for "scatter+".</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><g><rect x="4" y="6" width="52" height="40" fill="var(--accent)"/><rect x="60" y="6" width="32" height="24" fill="var(--accent-2)"/><rect x="96" y="6" width="20" height="24" fill="var(--muted)"/><rect x="60" y="34" width="56" height="12" fill="var(--muted)"/><rect x="4" y="50" width="40" height="16" fill="var(--accent-2)"/><rect x="48" y="50" width="68" height="16" fill="var(--muted)"/></g></svg>
-      <h4>Treemap</h4>
-      <p class="when"><strong>Use for:</strong> part-to-whole when you have many categories and only care about the big ones (revenue share by customer). Hard to read precise values — pair with a tooltip.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><text x="6" y="30" font-family="JetBrains Mono" font-size="26" font-weight="700" fill="var(--accent)">€1.2M</text><text x="6" y="50" font-family="Inter" font-size="11" fill="var(--muted)">Total revenue</text><text x="6" y="64" font-family="Inter" font-size="10" fill="var(--accent-2)">▲ 8% vs LM</text></svg>
-      <h4>Card / KPI</h4>
-      <p class="when"><strong>Use for:</strong> a single headline number (total revenue, delivered %). The KPI variant adds a target and trend. Put these top-left — eyes land there first.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><g stroke="var(--line)" stroke-width="1"><line x1="4" y1="22" x2="116" y2="22"/><line x1="4" y1="40" x2="116" y2="40"/><line x1="40" y1="6" x2="40" y2="66"/><line x1="78" y1="6" x2="78" y2="66"/></g><g fill="var(--ink)" font-family="JetBrains Mono" font-size="9"><text x="8" y="18">Region</text><text x="46" y="18">Orders</text><text x="84" y="18">Rev</text><text x="8" y="36">EMEA</text><text x="46" y="36">48</text><text x="84" y="36">€0.9M</text><text x="8" y="54">APAC</text><text x="46" y="54">14</text><text x="84" y="54">€0.3M</text></g></svg>
-      <h4>Matrix / Table</h4>
-      <p class="when"><strong>Use for:</strong> precise numbers people will read or export, and drill-down by rows+columns (Region × Service). When the exact figure matters more than the shape, use a matrix.</p>
-    </div>
-    <div class="viz">
-      <svg viewBox="0 0 120 70"><path d="M30 60 a30 30 0 0 1 60 0" fill="none" stroke="var(--muted)" stroke-width="9"/><path d="M30 60 a30 30 0 0 1 44 -26" fill="none" stroke="var(--accent)" stroke-width="9"/><line x1="60" y1="60" x2="78" y2="40" stroke="var(--ink)" stroke-width="2.5"/><circle cx="60" cy="60" r="3" fill="var(--ink)"/></svg>
-      <h4>Gauge</h4>
-      <p class="when"><strong>Use rarely:</strong> one value against a target (delivered % vs goal). Eats space for one number — a KPI card usually does the job with less ink.</p>
-    </div>
-  </div>
+---
 
-  <div class="note" style="margin-top:22px"><span class="ic">✓</span><div><strong>Interaction is free:</strong> click a bar and every other visual on the page filters to it. Add <strong>Slicers</strong> (Region, Status, Date) so viewers explore without you. That responsiveness is the whole point of Power BI over a static chart.</div></div>
+## Who it's for
 
-  <div class="try"><p class="q">Try it — pick the visual</p>
-    <p>For each question, which visual fits best?</p>
-    <p class="hint">a) "How is order volume trending month by month?" &nbsp; b) "Which customers drive the most revenue?" &nbsp; c) "What's our overall delivered rate right now?" &nbsp; d) "Is higher FTE effort actually linked to higher revenue?"</p>
-    <details class="reveal"><summary>Show answer</summary><div class="ans">
-      <p><strong>a)</strong> Line chart (time trend). &nbsp; <strong>b)</strong> Bar chart, sorted descending. &nbsp; <strong>c)</strong> KPI/Card. &nbsp; <strong>d)</strong> Scatter plot (FTE Days on X, Revenue on Y).</p>
-    </div></details>
-  </div>
-    </div></details>
-  </div>
+New or upskilling DPMs who need practical data skills, and anyone maintaining the hub. No prior coding is assumed by the lessons; the site teaches from the basics up. All examples use a single fictional delivery dataset so the same data carries across Excel, SQL and Power BI.
 
-  <div data-tier-panel="p" data-tier="adv" class="tier-panel">
-    <details class="lesson open"><summary><span class="caret">▸</span><span class="fn">DAX</span> Measures that react to filters <span class="tag">DAX</span></summary>
-    <div class="body">
-<p class="lead">DAX (Data Analysis Expressions) is the formula language. The single most important distinction:</p>
-  <div class="grid cols-2" style="margin:6px 0 8px">
-    <div class="card"><h3>Calculated column</h3><p>Computed <em>per row</em>, stored in the table, fixed at refresh. Use for row-level attributes you'll group or filter by.</p>
-      <div class="code"><button class="copy">Copy</button><span class="code-text">Days Late =
-IF( ISBLANK(Projects[Actual Go-Live]),
-    BLANK(),
-    Projects[Actual Go-Live] - Projects[Target Go-Live] )</span></div>
-    </div>
-    <div class="card"><h3>Measure</h3><p>Computed <em>on the fly</em> for whatever's on screen, reacting to every slicer and click. Use for all aggregations and KPIs.</p>
-      <div class="code"><button class="copy">Copy</button><span class="code-text">Total Revenue = SUM( Projects[Revenue (EUR)] )</span></div>
-    </div>
-  </div>
-  <div class="note warn"><span class="ic">!</span><div>Beginner trap: don't build measures as calculated columns. If you find yourself wanting a <em>total</em> or <em>average</em> that should change with filters, it's a <strong>measure</strong>.</div></div>
+## Quick start
 
-  <h3 style="margin-top:30px">The measures you'll write first</h3>
-  <div class="code"><button class="copy">Copy</button><span class="code-text">Order Count       = COUNTROWS( Projects )
+**View it live:** open the GitHub Pages URL above.
 
-Delivered Orders  = CALCULATE( [Order Count], Projects[Status] = "Delivered" )
+**Run it locally:** because everything is static, you can just open `index.html` in a browser. The SQL runner and exams use `fetch()` for a WebAssembly module and JSON, which some browsers block on the `file://` protocol, so it's best to serve the folder over HTTP:
 
-Delivered %       = DIVIDE( [Delivered Orders], [Order Count] )
+```bash
+# from the repository root
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
 
-Avg FTE Days      = AVERAGE( Projects[FTE Days] )
+There is nothing to install or compile.
 
-Distinct Customers= DISTINCTCOUNT( Projects[Customer] )
+## Site map
 
-EMEA Revenue      = CALCULATE( [Total Revenue], Projects[Region] = "EMEA" )</span></div>
-  <p><strong>CALCULATE</strong> is the heart of DAX — it changes the filter context an expression runs in. <strong>DIVIDE</strong> is safe division (returns blank, not an error, on divide-by-zero).</p>
+Nine pages, all sharing one header, footer and stylesheet (applied by `tools/apply-shell.py`). Each track page follows the same shape (see [Anatomy of a track page](#anatomy-of-a-track-page)).
 
-  <h3 style="margin-top:30px">Time intelligence (needs a Date table)</h3>
-  <div class="code"><button class="copy">Copy</button><span class="code-text">Revenue YTD       = TOTALYTD( [Total Revenue], 'Date'[Date] )
-Revenue Last Month= CALCULATE( [Total Revenue], PREVIOUSMONTH( 'Date'[Date] ) )</span></div>
+| Page | Theme | What it covers |
+|------|-------|----------------|
+| `index.html` | hub | Landing page — live data preview, track cards with your progress, the learning path, study plans, and "continue where you left off". |
+| `dashboard.html` | hub | **Live Dashboard** — filterable KPIs and click-to-filter charts on the sample data, a sortable data explorer with CSV export, and the Excel / SQL / DAX behind every chart. |
+| `data-foundations.html` | data | Relational basics: tables &amp; keys, storage/pages, ER &amp; EER diagrams, star vs snowflake schemas, and **OLAP** (the cube, slice/dice/drill-up/down, OLAP questions). |
+| `excel.html` | excel | Formulas &amp; functions by level, a **live formula runner**, a dedicated **PivotTables** section (linked to OLAP), and a long graded exam. |
+| `sql.html` | sql | SQL clauses by level, a **live SQL runner** (real SQLite in the browser), good habits, and a graded exam. |
+| `powerbi.html` | powerbi | Power BI/DAX by level, a **DAX syntax checker**, good habits, and a graded exam. |
+| `powerautomate.html` | flow | Flows &amp; expressions by level, design challenges, and a graded exam. |
+| `courses.html` | hub | Curated external courses and learning resources per tool. |
+| `downloads.html` | hub | One place to download every cheat sheet, guide and dataset, each with an explanation. |
 
-  <div class="try"><p class="q">Try it</p>
-    <p>Write two measures: the <em>number of On Hold orders</em>, and the <em>average revenue per delivered order</em>.</p>
-    <details class="reveal"><summary>Show answer</summary><div class="ans">
-      <div class="code"><button class="copy">Copy</button><span class="code-text">On Hold Orders     = CALCULATE( [Order Count], Projects[Status] = "On Hold" )
+The header is: **Home · Learn ▾ (the five tracks) · Live Dashboard · Courses · Downloads**, plus search (<kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd>) and a light/dark toggle. On phones it collapses into a slide-out menu.
 
-Avg Delivered Rev  = DIVIDE(
-                       CALCULATE( [Total Revenue], Projects[Status]="Delivered" ),
-                       [Delivered Orders]
-                     )</span></div>
-    </div></details>
-  </div>
-    </div></details>
-  </div>
+## Repository structure
 
-</div></section>
+```
+dpm-learning-hub/
+├── index.html                 # Landing / hub
+├── data-foundations.html      # Data modelling & OLAP
+├── excel.html                 # Excel track
+├── sql.html                   # SQL track
+├── powerbi.html               # Power BI track
+├── powerautomate.html         # Power Automate track
+├── dashboard.html             # Live Dashboard (capstone)
+├── courses.html               # External course links
+├── downloads.html             # Downloads hub
+├── README.md                  # This file
+├── assets/
+    ├── css/
+    │   └── styles.css          # All styling + per-track theme variables
+    ├── js/
+    │   ├── main.js             # Header/menu, dark mode, search, progress, TOC, copy buttons, tier tabs, quizzes
+    │   ├── sample-data.js      # The shared dataset (window.DPM_DATA): headers, columns, 72 rows
+    │   ├── excel-engine.js     # Evaluates typed Excel formulas (window.ExcelEngine)
+    │   ├── dax-validator.js    # Syntax/style checker for DAX (window.DaxValidator)
+    │   ├── exam.js             # Graded, randomised exam engine
+    │   ├── playground.js       # Wires the Excel / SQL / DAX runners on the pages
+    │   ├── dashboard.js        # The Live Dashboard: filters, charts, explorer, CSV export
+    │   └── search-index.js     # GENERATED by tools/build-search-index.py
+    ├── vendor/
+    │   ├── sql-wasm.js         # sql.js — SQLite compiled to WebAssembly (runs the SQL runner)
+    │   └── sql-wasm.wasm
+    ├── data/
+    │   ├── dpm_projects.csv    # The 72-row sample dataset (clean)
+    │   ├── dpm_projects.xlsx
+    │   ├── dpm_messy_data.csv  # A deliberately messy version, for cleaning practice
+    │   └── dpm_messy_data.xlsx
+    └── docs/                   # Downloadable documents (see below)
+        ├── Excel-Formula-Cheat-Sheet.pdf
+        ├── SQL-Cheat-Sheet.pdf
+        ├── DAX-PowerBI-Cheat-Sheet.pdf
+        ├── Power-Automate-Cheat-Sheet.pdf
+        ├── DPM-12-Week-Study-Plan.pdf
+        └── Setting-up-SQL-Server-on-Windows.docx
+└── tools/                      # Maintainer scripts that generate the docs above (not served)
+    ├── cs_common.py            # Shared cheat-sheet renderer (reportlab)
+    ├── build-excel-cheatsheet.py
+    ├── build-sql-cheatsheet.py
+    ├── build-dax-cheatsheet.py
+    ├── build-flow-cheatsheet.py
+    ├── build-study-plan.py     # The printable 12-week planner (PDF)
+    ├── apply-shell.py          # Applies the shared header/footer/ids to every page
+    ├── build-search-index.py   # Regenerates assets/js/search-index.js
+    └── build-sqlserver-guide.js  # Generates the Word setup guide (docx)
+```
 
-<!-- GOOD HABITS -->
-<section style="background:var(--surface)"><div class="wrap">
-  <span class="eyebrow">Good habits</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">What separates a clean report</h2>
-  <div class="deflist">
-    <div class="d"><b>Measures, not columns</b> — if a total or average should react to slicers, it's a measure. Reserve calculated columns for row-level attributes you group or filter by.</div>
-    <div class="d"><b>Star schema first</b> — one fact table surrounded by dimensions. The engine and DAX are built for it; a single flat table fights you later.</div>
-    <div class="d"><b>Always add a Date table</b> — and mark it as one. Every time-intelligence measure (YTD, prior month, YoY) depends on it.</div>
-    <div class="d"><b>DIVIDE, not /</b> — <code>DIVIDE(a, b, 0)</code> returns a blank or your fallback instead of a divide-by-zero error.</div>
-    <div class="d"><b>One visual, one question</b> — pick the chart by the comparison you're making, then add slicers and let interactions do the exploring.</div>
-    <div class="d"><b>Name &amp; format measures</b> — explicit, well-named, pre-formatted measures keep a model readable and reusable.</div>
-  </div>
-</div></section>
+> `tools/` is for maintainers — it regenerates the files in `assets/docs/`, the shared page shell, and the search index. It isn't served and can be ignored by users.
 
-<!-- DAX VALIDATOR -->
-<section style="background:var(--surface)"><div class="wrap">
-  <span class="eyebrow">Try it for real</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">DAX checker</h2>
-  <p class="lead">Write a measure and have it checked for syntax and common mistakes. DAX needs a live Power BI model to actually calculate, so this is a <b>syntax &amp; style check</b> — it catches unbalanced brackets, unknown functions and habits worth fixing, against a model with tables <code>Fact_Orders</code> and <code>Dim_Region</code>.</p>
+## Anatomy of a track page
 
-  <div class="play" id="dax-play">
-    <textarea class="code-in" id="dax-in" spellcheck="false" rows="2">Total Revenue := SUM(Fact_Orders[revenue])</textarea>
-    <div class="play-actions">
-      <button class="btn" id="dax-run">▶ Check</button>
-    </div>
-    <div class="chips">
-      <button class="chip-btn" data-f="Total Revenue := SUM(Fact_Orders[revenue])">SUM</button>
-      <button class="chip-btn" data-f="Delivered Orders := CALCULATE(COUNTROWS(Fact_Orders), Fact_Orders[status]=&quot;Delivered&quot;)">CALCULATE</button>
-      <button class="chip-btn" data-f="On-Time % := DIVIDE([Delivered Orders], COUNTROWS(Fact_Orders), 0)">DIVIDE</button>
-      <button class="chip-btn" data-f="Customers := DISTINCTCOUNT(Fact_Orders[customer])">DISTINCTCOUNT</button>
-      <button class="chip-btn" data-f="Bad := SUM(Fact_Orders[revenue]) / COUNTROWS(Fact_Orders)">/ (tip)</button>
-      <button class="chip-btn" data-f="Oops := CALCULATE([Total Revenue]">unbalanced</button>
-    </div>
-    <div class="out" id="dax-out" style="margin-top:12px"></div>
-  </div>
-</div></section>
+The four tool tracks (Excel, SQL, Power BI, Power Automate) share the same top-to-bottom structure so the experience is consistent:
 
-<!-- EXAM -->
-<section style="background:var(--surface-2)"><div class="wrap">
-  <span class="eyebrow">Test yourself</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Power BI final exam</h2>
-  <p class="lead">A randomised mix across the whole track — modelling, DAX, visuals and the get/transform/publish flow. Retake it; the questions reshuffle each time.</p>
-  <div class="exam" data-bank="powerbiBank" data-count="8"></div>
-</div></section>
+1. **Hero** — title, one-paragraph intro, and any sample-data download links.
+2. **Download callout** — a card linking to that track's printable cheat sheet (the SQL page also links the setup guide).
+3. **Context** — short reference the lessons rely on (e.g. SQL's "Your tables", Power Automate's "four flow types").
+4. **Lessons by level** — a **tabbed** section with three levels (*Basic / Intermediate / Advanced*). Each lesson is a collapsible accordion with a worked example and a *Try it* task that reveals a model answer.
+5. **Good habits / tips** — common pitfalls and best practice.
+6. **Try it for real** — a live runner where it applies (Excel formulas, SQL queries, DAX syntax).
+7. **Exam** — a graded, randomised final test.
+8. **Footer** + the page's `<script>` includes.
 
-<script type="application/json" id="powerbiBank">
-[
- {"q":"You want a total that updates when users click a region slicer. Build a…","opts":["Measure","Calculated column","Power Query custom column","Calculated table"],"correct":0,"why":"Measures recalculate live in the current filter context. Columns and Power Query values are fixed at refresh."},
- {"q":"Which function safely handles divide-by-zero in DAX?","opts":["DIVIDE","SUM","CALCULATE","ROUND"],"correct":0,"why":"DIVIDE(numerator, denominator, [alternate]) returns BLANK (or your alternate) instead of an error when the denominator is zero."},
- {"q":"You have 8 customers and want to compare their revenue. Best default visual?","opts":["Bar chart sorted descending","Pie chart","Gauge","Card"],"correct":0,"why":"A pie with 8 similar slices is hard to read; a sorted bar chart makes the ranking instantly clear."},
- {"q":"What's the single most important DAX function for changing filter context?","opts":["CALCULATE","SUM","FORMAT","RELATED"],"correct":0,"why":"CALCULATE evaluates an expression under modified filters — the backbone of most non-trivial measures."},
- {"q":"For a clean, fast model in Power BI you should aim for a…","opts":["Star schema (fact + dimensions)","Single flat table","Snowflake with deep chains","One table per column"],"correct":0,"why":"Power BI's engine and DAX are optimised for a star schema: a central fact table surrounded by dimensions."},
- {"q":"Power BI <b>Desktop</b> vs <b>Service</b> — which builds reports, which shares them?","opts":["Desktop builds; Service shares/refreshes in the browser","Service builds; Desktop shares","Both only build","Both only share"],"correct":0,"why":"You author in Desktop, then publish to the Service where others view, and scheduled refresh keeps data current."},
- {"q":"Where should you clean and reshape data before modelling?","opts":["Power Query (Transform data)","DAX measures","The visual's format pane","Excel, every time"],"correct":0,"why":"Power Query is the transform layer — its steps replay on every refresh. DAX is for calculation, not cleaning."},
- {"q":"A calculated column vs a measure: the column is…","opts":["Computed row-by-row at refresh and stored","Recomputed live per filter context","Only for slicers","Faster for every total"],"correct":0,"why":"A calculated column is evaluated per row and stored at refresh; a measure is evaluated on the fly in context."},
- {"q":"To count unique customers, use…","opts":["DISTINCTCOUNT(Fact_Orders[customer])","COUNT(Fact_Orders[customer])","SUM(Fact_Orders[customer])","COUNTROWS(customer)"],"correct":0,"why":"DISTINCTCOUNT returns the number of unique values; COUNT just counts non-blank rows."},
- {"q":"Relationships between fact and dimension tables are typically…","opts":["One-to-many (dimension → fact)","Many-to-many by default","One-to-one","Not needed"],"correct":0,"why":"A dimension's key is unique (one) and appears many times in the fact, giving a one-to-many relationship."},
- {"q":"You need a KPI like 'this month vs last month'. The right tool is…","opts":["A time-intelligence measure (e.g. with DATEADD / SAMEPERIODLASTYEAR)","A calculated column of dates","A slicer only","Conditional formatting"],"correct":0,"why":"Time-intelligence DAX shifts the date filter to compare periods — best paired with a proper date table."},
- {"q":"Which visual is the wrong default for showing a single headline number?","opts":["Line chart","Card","KPI visual","Multi-row card"],"correct":0,"why":"A single value is clearest as a Card/KPI; a line chart implies a trend over a dimension."}
-]
-</script>
+## Interactive components
 
-<footer class="foot"><div class="wrap">
-  <p>Power BI track · DPM Learning Hub. Build order: get → transform → model → DAX → visualize → publish. <a href="powerautomate.html">Next up: Power Automate →</a></p>
-</div></footer>
+All interactivity is plain JavaScript loaded per page. The relevant scripts are included at the bottom of each page.
 
-<script src="assets/js/dax-validator.js"></script>
-<script src="assets/js/playground.js"></script>
-<script src="assets/js/exam.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+### `main.js` (every page)
+- **Header:** the *Learn* mega-menu, the mobile slide-out drawer, light/dark toggle (remembered in `localStorage`, applied before first paint).
+- **Search:** <kbd>/</kbd> or <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> opens a keyboard-driven search over `search-index.js` (pages, sections, lessons, glossary terms, downloads, courses).
+- **Progress:** every lesson gets a *Mark lesson complete* button; track pages show a progress bar and best exam score; the home page shows progress per track and a *Continue* card. Stored only in the browser.
+- **Navigation aids:** scroll-progress bar, auto-generated *On this page* table of contents, back-to-top, and deep links — `page.html#lesson-id` switches to the right tier tab and opens the lesson.
+- **Content helpers:** **Copy** buttons on code blocks, **tier tabs** (arrow-key accessible), and the static self-check **quizzes**.
+
+### `sample-data.js`
+Exposes `window.DPM_DATA` — the one dataset used everywhere:
+- `excelHeaders` — 17 column names (`Order ID … Priority`), i.e. spreadsheet columns **A–Q**.
+- `sqlColumns` / `sqlTypes` — the same data as a SQL table.
+- `rows` — **72** records. In spreadsheet terms, data lives in **rows 2–73**.
+
+### `excel-engine.js` — the Excel runner & formula grading
+`window.ExcelEngine.evaluate(formula, { headers, rows })` parses and evaluates a real Excel formula against the dataset and returns `{ ok, value }` or `{ ok:false, error }`. It supports the common functions taught on the page (SUM, AVERAGE, COUNT/COUNTA, MIN/MAX, ROUND, IF/IFERROR, AND/OR/NOT, SUMIF(S), COUNTIF(S), AVERAGEIF(S), VLOOKUP, XLOOKUP, LEN/LEFT/RIGHT/MID, UPPER/LOWER/TRIM, CONCAT, TEXTJOIN, SUMPRODUCT, YEAR/MONTH/DAY and arithmetic). It powers both the formula runner and the auto-graded formula questions in the Excel exam.
+
+### `sql.js` (vendored) — the SQL runner
+The SQL page loads SQLite compiled to WebAssembly (`assets/vendor/sql-wasm.js` + `.wasm`). `playground.js` builds an in-memory database from `DPM_DATA` (tables `orders` and `targets`) so every query runs **entirely in the browser** — no server. The same database grades the SQL exam questions.
+
+### `dax-validator.js` — DAX checker
+`window.DaxValidator.validate(expr)` performs a **syntax &amp; style** check (balanced brackets, known functions, common mistakes). DAX needs a live Power BI model to actually compute, so the Power BI "runner" checks correctness of *form*, not a value.
+
+### `playground.js`
+Wires the on-page runners to their engines: `#xl-play` → ExcelEngine, `#sql-play` → sql.js, `#dax-play` → DaxValidator. Also exposes the SQL database build helpers used by the exam.
+
+### `exam.js` — the exam engine
+Renders a graded, randomised exam from a JSON bank embedded in the page:
+
+```html
+<div class="exam" data-bank="excelBank" data-count="30" data-formulas="10"></div>
+<script type="application/json" id="excelBank">[ ...items ]</script>
+```
+
+- `data-count` — how many questions to show per attempt (capped at the bank size).
+- `data-typed` / `data-formulas` / `data-sql` — how many of those are *typed* questions (you write a formula/query and it's graded). These three attribute names are aliases.
+
+Each attempt picks a fresh random subset and shuffles options. **Test** previews, **Check answers** grades and shows model answers, **New set** reshuffles.
+
+## Downloadable documents
+
+Collected on `downloads.html` and stored in `assets/docs/`:
+
+| File | Type | What it is |
+|------|------|------------|
+| `Excel-Formula-Cheat-Sheet.pdf` | PDF | Two-page Excel reference (formulas, lookups, arrays, PivotTables, shortcuts). |
+| `SQL-Cheat-Sheet.pdf` | PDF | Two-page SQL reference (clauses, joins, window functions, patterns, dialect notes). |
+| `DAX-PowerBI-Cheat-Sheet.pdf` | PDF | Two-page Power BI &amp; DAX reference (modelling, CALCULATE, time intelligence, visuals). |
+| `Power-Automate-Cheat-Sheet.pdf` | PDF | Two-page flows &amp; expressions reference (controls, functions, OData, patterns). |
+| `Setting-up-SQL-Server-on-Windows.docx` | Word | Step-by-step guide to installing SQL Server + SSMS on Windows. |
+
+The four cheat sheets are styled like the classic R/RStudio reference cards (dense, two-page, landscape). They are generated by the scripts in `tools/` — see [Editing &amp; extending](#editing--extending).
+
+## Design system
+
+- **Track accents:** a `data-theme` attribute on `<body>` (`hub`, `data`, `excel`, `sql`, `powerbi`, `flow`) sets `--accent` (fills), `--on-accent` (text on fills) and `--accent-ink` (contrast-safe accent text).
+- **Light / dark mode:** `html[data-mode="light|dark"]` swaps every surface, ink and code token; it defaults to the OS setting and is toggled from the header.
+- **Responsive:** every page is checked at 390px phone width with no horizontal scroll.
+- **Fonts:** Bricolage Grotesque (display), Inter (body), JetBrains Mono (code), loaded from Google Fonts.
+- **No inline frameworks:** styling is hand-written CSS; there is no Tailwind/Bootstrap and no JS framework.
+
+## Editing &amp; extending
+
+### After editing any page — two commands
+```bash
+python3 tools/apply-shell.py         # re-applies header/footer/breadcrumbs and gives new sections & lessons stable ids
+python3 tools/build-search-index.py  # refreshes search and the lesson counts behind progress bars
+```
+To change the navigation, footer links or a track's name/colour, edit the `TRACKS` / `PAGES` lists at the top of `tools/apply-shell.py` and re-run it. The shell lives between `<!-- shell:… -->` markers in each page — don't hand-edit inside them.
+
+### Add or edit a lesson
+Lessons are collapsible `<details class="lesson">` blocks inside a `.tier-panel`. Copy an existing one as a template — keep the `<summary>` (name, short description, level tag) and put the explanation, a `.code` block, and an optional `.try` / `reveal` answer in the `.body`. Code blocks need a **Copy** button plus a `.code-text` span holding the exact text to copy.
+
+### Add exam questions
+Append items to the page's JSON bank (`<script type="application/json" id="...Bank">`). Three item shapes are supported:
+
+```jsonc
+// Multiple choice (default)
+{ "q": "Question text (HTML allowed)", "opts": ["A","B","C","D"], "correct": 0, "why": "Explanation shown after grading" }
+
+// Typed Excel formula — graded by ExcelEngine
+{ "type": "formula", "q": "...", "answer": "=SUM(O2:O73)", "expect": 1533987, "tol": 0.01, "hint": "...", "why": "..." }
+
+// Typed SQL query — graded against the in-browser SQLite DB
+{ "type": "sql", "q": "...", "answer": "SELECT SUM(revenue) FROM orders;", "expect": 1533987, "why": "..." }
+```
+
+`expect` is compared to the value the learner's answer produces (numbers within `tol`, default 0.01; strings case-insensitively). **Always verify a new typed question** by running its `answer` through the matching engine before committing (see below). Then, if needed, raise `data-count` / `data-formulas` on the `.exam` div.
+
+### Regenerate a cheat sheet (maintainers)
+The PDFs are produced with Python + [reportlab]; the Word guide with Node + the `docx` library.
+
+```bash
+pip install reportlab            # one-time
+python tools/build-excel-cheatsheet.py   # or build-sql / build-dax / build-flow
+```
+
+Each script writes a PDF (see the `OUT` path near the top of the file); copy the result into `assets/docs/`. All four PDF builders share `tools/cs_common.py`, which renders the two-page, three-column layout — edit the `sections` list in a builder to change content, or the colour arguments to re-theme.
+
+## Validating changes
+
+Two cheap checks catch almost everything:
+
+**1. HTML is well-formed** (balanced tags). A quick Python check:
+
+```bash
+python3 - <<'PY'
+from html.parser import HTMLParser
+import glob
+class V(HTMLParser):
+    void={'br','img','meta','link','hr','input','area','base','col','embed','source','track','wbr'}
+    def __init__(s): super().__init__(); s.st=[]; s.err=[]
+    def handle_starttag(s,t,a):
+        if t not in s.void: s.st.append(t)
+    def handle_endtag(s,t):
+        if t in s.void: return
+        if s.st and s.st[-1]==t: s.st.pop()
+        else: s.err.append("mismatch at </%s>"%t)
+for f in sorted(glob.glob("*.html")):
+    p=V(); p.feed(open(f,encoding="utf-8").read())
+    print(f, "OK" if not p.err and not [x for x in p.st if x!="html"] else p.err[:3])
+PY
+```
+
+**2. Typed exam answers actually grade.** Node can load the engines (they attach to `window`, so set `global.window = global` first) and run each `answer` against the dataset, comparing to `expect`. The SQL engine loads via `require('./assets/vendor/sql-wasm.js')`. This is how the existing banks were verified.
+
+## Deployment
+
+Hosted on **GitHub Pages**. Pushing to the default branch publishes the site (Settings → Pages → deploy from branch). Because there's no build step, what's in the repo is exactly what ships. Paths are all **relative**, so the site also works from a sub-path or a local folder.
+
+## Tech stack
+
+- HTML5, CSS3 (custom properties for theming), vanilla ES5/ES6 JavaScript — no framework, no bundler.
+- [sql.js](https://sql.js.org/) (SQLite via WebAssembly) for the in-browser SQL runner.
+- Google Fonts (Bricolage Grotesque, Inter, JetBrains Mono).
+- Maintainer tooling only: Python + reportlab (cheat-sheet PDFs), Node + docx (Word guide).
+
+## Roadmap
+
+- Bring the **Foundations** page to full parity (tabbed lessons + a graded exam + a cheat sheet).
+- Optional typed graders for Power BI (DAX) and Power Automate (expression syntax).
+- Possible DPM-specific onboarding content (internal workflows, systems, KPIs) and templates.
+- ✅ Done: site-wide search, progress tracking, dark mode, Live Dashboard capstone.
+
+---
+
+*All data in this project is fictional and for training purposes only.*
