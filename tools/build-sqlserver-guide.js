@@ -300,6 +300,6 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync("/mnt/user-data/outputs/Setting-up-SQL-Server-on-Windows.docx", buf);
+  fs.writeFileSync(require("path").join(__dirname, "..", "assets", "docs", "Setting-up-SQL-Server-on-Windows.docx"), buf);
   console.log("written:", buf.length, "bytes");
 });

@@ -3,31 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- shell:head -->
 <title>Excel — DPM Learning Hub</title>
+<meta name="description" content="Formulas, lookups, PivotTables &amp; Power Query.">
+<meta name="theme-color" content="#0E1729">
+<meta property="og:title" content="Excel — DPM Learning Hub">
+<meta property="og:description" content="Formulas, lookups, PivotTables &amp; Power Query.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E1729'/%3E%3Crect x='7' y='17' width='4' height='8' rx='1.5' fill='%23FF9A4D'/%3E%3Crect x='14' y='11' width='4' height='14' rx='1.5' fill='%23B9A0FF'/%3E%3Crect x='21' y='6' width='4' height='19' rx='1.5' fill='%234FD1EA'/%3E%3C/svg%3E">
+<script>(function(){try{var m=JSON.parse(localStorage.getItem('dpm-mode'));if(m)document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<!-- /shell:head -->
 </head>
-<body data-theme="excel">
-<div class="scrollbar"></div>
-
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="dot"></span> DPM Learning Hub</a>
-  <button class="menu-btn" aria-label="Menu">☰</button>
-  <div class="nav-links">
+<body data-theme="excel" data-track="excel">
+<!-- shell:header -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="scrollbar" aria-hidden="true"></div>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="DPM Learning Hub — home"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span><span>DPM Learning Hub<small>Data analytics academy</small></span></a>
+  <nav class="main-nav" aria-label="Main">
     <a href="index.html">Home</a>
-    <a href="data-foundations.html">Foundations</a>
-    <a href="excel.html" aria-current="page">Excel</a>
-    <a href="sql.html">SQL</a>
-    <a href="powerbi.html">Power BI</a>
-    <a href="powerautomate.html">Power Automate</a>
+    <div class="menu">
+      <button class="menu-trigger current" aria-expanded="false" aria-haspopup="true">Learn <span class="chev" aria-hidden="true">▾</span></button>
+      <div class="mega"><a href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span><span><b>01 · Foundations</b><span class="d">Tables, keys, schemas & OLAP — the groundwork</span></span></a><a href="excel.html" aria-current="page"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span><span><b>02 · Excel</b><span class="d">Formulas, lookups, PivotTables & Power Query</span></span></a><a href="sql.html"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span><span><b>03 · SQL</b><span class="d">Query real data live in your browser</span></span></a><a href="powerbi.html"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span><span><b>04 · Power BI</b><span class="d">Model, write DAX and build dashboards</span></span></a><a href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span><span><b>05 · Power Automate</b><span class="d">Automate reports, alerts & approvals</span></span></a>
+        <div class="mega-foot"><a href="index.html#path">See the recommended path →</a><a href="downloads.html">Cheat sheets &amp; datasets →</a></div>
+      </div>
+    </div>
+    <a href="dashboard.html">Live Dashboard</a>
     <a href="courses.html">Courses</a>
     <a href="downloads.html">Downloads</a>
+  </nav>
+  <div class="header-tools">
+    <button class="search-btn" type="button" data-search-open aria-label="Search the hub"><span class="s-icon" aria-hidden="true">⌕</span><span class="s-label">Search lessons…</span><kbd><span class="kbd-mod">Ctrl</span> K</kbd></button>
+    <button class="icon-btn" type="button" data-mode-toggle aria-label="Toggle dark mode"><svg class="mode-ic-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="mode-ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="icon-btn drawer-btn" type="button" data-drawer-toggle aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">☰</button>
   </div>
-</div></nav>
+</div></header>
+<div class="drawer" id="site-drawer">
+  <div class="drawer-backdrop" data-drawer-close></div>
+  <div class="drawer-panel" role="dialog" aria-label="Menu">
+    <div class="drawer-top"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a><button class="icon-btn" type="button" data-drawer-close aria-label="Close menu">✕</button></div>
+    <button class="search-btn" type="button" data-search-open style="width:100%"><span class="s-icon" aria-hidden="true">⌕</span>Search lessons…</button>
+    <h4>Start</h4>
+    <a class="d-link" href="index.html">Home</a>
+    <a class="d-link" href="dashboard.html">Live Dashboard</a>
+    <h4>Learning tracks</h4>
+    <a class="d-link" href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span>Foundations</a><a class="d-link" href="excel.html" aria-current="page"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span>Excel</a><a class="d-link" href="sql.html"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span>SQL</a><a class="d-link" href="powerbi.html"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span>Power BI</a><a class="d-link" href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span>Power Automate</a>
+    <h4>Resources</h4>
+    <a class="d-link" href="courses.html">Courses &amp; certifications</a>
+    <a class="d-link" href="downloads.html">Downloads</a>
+  </div>
+</div>
+<!-- /shell:header -->
+<main id="main">
 
 <header class="hero"><div class="wrap">
+  <!-- shell:crumbs --><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="index.html#tracks">Learn</a><span class="sep">/</span><span aria-current="page">Excel</span><span class="sep">·</span><span>Track 2 of 5</span></nav><!-- /shell:crumbs -->
   <span class="tool-badge"><span class="glyph">X</span> Microsoft Excel</span>
   <h1>Excel, from first<br>formula to dynamic arrays.</h1>
   <p class="lead">Excel is where most delivery analysis starts. This track builds in three tiers — start at the basics, level up to lookups and PivotTables, then reach for the modern array functions. Every example uses the sample workbook, so download it and follow along in a real sheet.</p>
@@ -37,11 +70,18 @@
     <a class="dl ghost" href="assets/data/dpm_projects.csv" download>⬇ CSV</a>
   </div>
   <p class="hint" style="color:var(--muted);font-size:.9rem;margin-top:14px">The data lives on the <strong>Projects</strong> sheet, columns A–Q, rows 2–73. There's a <strong>TASKS</strong> tab in the training workbook with drills to try — keys are further down this page. Make a Table out of the data (<kbd>Ctrl</kbd>+<kbd>T</kbd>) before you start.</p>
+<!-- shell:progress -->
+  <div class="track-progress" data-progress="excel" hidden>
+    <div class="tp-row"><span><b>Your progress</b> · saved in this browser</span><span class="pbar-txt"></span></div>
+    <div class="pbar"><span class="pbar-fill"></span></div>
+    <p data-exam-best="excel" hidden></p>
+  </div>
+<!-- /shell:progress -->
 </div></header>
 
 <!-- CHEAT SHEET DOWNLOAD -->
 <section><div class="wrap">
-  <div class="card" style="border-left:4px solid var(--accent);display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+  <div class="callout">
     <div style="flex:1 1 340px">
       <h3 style="margin:0 0 .3em">Grab the printable cheat sheet</h3>
       <p style="margin:0;color:var(--ink-soft)">A dense, two-page reference card — formulas, functions, references, dynamic arrays, PivotTables, Power Query and shortcuts — in the style of the classic R/RStudio cheat sheets. Print it, pin it, keep it by your keyboard.</p>
@@ -50,9 +90,9 @@
   </div>
 </div></section>
 
-<section><div class="wrap">
+<section id="functions-by-level"><div class="wrap">
   <span class="eyebrow">Functions by level</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .2em">Build your formula vocabulary</h2>
+  <h2>Build your formula vocabulary</h2>
   <p class="lead">This track is split into <strong>three levels</strong> — tap any card to switch. Start at Level 1 and climb. Each function has a worked example on the sample data and a task to try yourself before revealing the answer.</p>
 
   <div class="tiers" data-tiers="x" role="tablist">
@@ -73,7 +113,7 @@
   <!-- ===================== BASIC ===================== -->
   <div data-tier-panel="x" data-tier="basic" class="tier-panel active">
 
-    <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">SUM / AVERAGE / COUNT</span> The starter pack <span class="tag">Basic</span></summary>
+    <details id="xl-sum-average-count" class="lesson" open><summary><span class="caret">▸</span><span class="fn">SUM / AVERAGE / COUNT</span> The starter pack <span class="tag">Basic</span></summary>
     <div class="body">
       <p><strong>SUM</strong> adds numbers, <strong>AVERAGE</strong> means them, <strong>COUNT</strong> counts cells that contain numbers, and <strong>COUNTA</strong> counts cells that aren't empty (text included).</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=SUM(O2:O73)        // total revenue
@@ -90,7 +130,7 @@
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">MIN / MAX</span> Find the extremes <span class="tag">Basic</span></summary>
+    <details id="xl-min-max" class="lesson"><summary><span class="caret">▸</span><span class="fn">MIN / MAX</span> Find the extremes <span class="tag">Basic</span></summary>
     <div class="body">
       <p>Return the smallest and largest number in a range. Handy for "biggest order" or "earliest date".</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=MAX(O2:O73)   // largest order value
@@ -104,7 +144,7 @@
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">IF</span> Make a decision <span class="tag">Basic</span></summary>
+    <details id="xl-if" class="lesson"><summary><span class="caret">▸</span><span class="fn">IF</span> Make a decision <span class="tag">Basic</span></summary>
     <div class="body">
       <p>The logic workhorse: <span class="mono">=IF(test, value_if_true, value_if_false)</span>.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=IF(H2="Delivered","Closed","Open")
@@ -119,7 +159,7 @@
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">&amp; / TEXTJOIN</span> Stick text together <span class="tag">Basic</span></summary>
+    <details id="xl-textjoin" class="lesson"><summary><span class="caret">▸</span><span class="fn">&amp; / TEXTJOIN</span> Stick text together <span class="tag">Basic</span></summary>
     <div class="body">
       <p>The <span class="mono">&amp;</span> operator glues text. <strong>TEXTJOIN</strong> does the same with a delimiter and can ignore blanks.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=B2&" — "&D2                         // "SKF Industrial — Gothenburg"
@@ -132,7 +172,7 @@
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">$ absolute references</span> Lock a cell <span class="tag">Basic</span></summary>
+    <details id="xl-absolute-references" class="lesson"><summary><span class="caret">▸</span><span class="fn">$ absolute references</span> Lock a cell <span class="tag">Basic</span></summary>
     <div class="body">
       <p>When you copy a formula down, references shift. A dollar sign locks a row or column so it doesn't move. <span class="mono">$O$2</span> locks both; <span class="mono">O$2</span> locks the row only; <span class="mono">$O2</span> locks the column only.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=O2/$O$74     // each order's share of the grand total in O74</span></div>
@@ -147,7 +187,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">ROUND</span> Tidy the decimals <span class="tag">Basic</span></summary>
+    <details id="xl-round" class="lesson"><summary><span class="caret">▸</span><span class="fn">ROUND</span> Tidy the decimals <span class="tag">Basic</span></summary>
     <div class="body">
       <p><span class="mono">=ROUND(number, digits)</span> — positive digits round after the decimal, <span class="mono">0</span> rounds to a whole number.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=ROUND(N2,0)              // FTE days to a whole number
@@ -160,7 +200,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
   <!-- ===================== INTERMEDIATE ===================== -->
   <div data-tier-panel="x" data-tier="inter" class="tier-panel">
 
-    <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">COUNTIF / SUMIF</span> Count &amp; total with a condition <span class="tag">Intermediate</span></summary>
+    <details id="xl-countif-sumif" class="lesson" open><summary><span class="caret">▸</span><span class="fn">COUNTIF / SUMIF</span> Count &amp; total with a condition <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>Add one criterion to a count or a sum.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=COUNTIF(H2:H73,"Delivered")          // how many delivered orders
@@ -175,7 +215,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">COUNTIFS / SUMIFS / AVERAGEIFS</span> Many conditions <span class="tag">Intermediate</span></summary>
+    <details id="xl-countifs-sumifs-averageifs" class="lesson"><summary><span class="caret">▸</span><span class="fn">COUNTIFS / SUMIFS / AVERAGEIFS</span> Many conditions <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>The <em>-IFS</em> versions take multiple criteria pairs. Note the argument order flips: in <strong>SUMIFS</strong> the sum range comes <em>first</em>.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=SUMIFS(O2:O73, G2:G73,"SD-WAN Migration", F2:F73,"APAC")
@@ -191,7 +231,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">XLOOKUP</span> The modern lookup <span class="tag">Intermediate</span></summary>
+    <details id="xl-xlookup" class="lesson"><summary><span class="caret">▸</span><span class="fn">XLOOKUP</span> The modern lookup <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p><strong>XLOOKUP</strong> replaces VLOOKUP. It looks up a value and returns a matching value from another column — in any direction, with a clean "if not found" option.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found])
@@ -208,7 +248,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">VLOOKUP &amp; INDEX/MATCH</span> The classics <span class="tag">Intermediate</span></summary>
+    <details id="xl-vlookup-index-match" class="lesson"><summary><span class="caret">▸</span><span class="fn">VLOOKUP &amp; INDEX/MATCH</span> The classics <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>You'll still meet these in older files. <strong>VLOOKUP</strong> searches the first column of a block and returns a column to its <em>right</em>:</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=VLOOKUP("10-1735122", A2:Q73, 8, FALSE)
@@ -219,14 +259,14 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       <div class="note warn"><span class="ic">!</span><div>VLOOKUP's column number breaks if someone inserts a column. Prefer <code>XLOOKUP</code> or <code>INDEX/MATCH</code> in anything you'll maintain.</div></div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">IFERROR</span> Catch the #N/A <span class="tag">Intermediate</span></summary>
+    <details id="xl-iferror" class="lesson"><summary><span class="caret">▸</span><span class="fn">IFERROR</span> Catch the #N/A <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>Wrap any formula to replace errors with something friendly.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=IFERROR(XLOOKUP(T1,A2:A73,B2:B73), "Check the Order ID")</span></div>
       <p>With XLOOKUP you'd usually use its built-in 4th argument instead; <code>IFERROR</code> shines around division and older lookups.</p>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">TEXT &amp; date functions</span> Format and slice dates <span class="tag">Intermediate</span></summary>
+    <details id="xl-text-date-functions" class="lesson"><summary><span class="caret">▸</span><span class="fn">TEXT &amp; date functions</span> Format and slice dates <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>Dates are just numbers under the hood. Pull pieces out, or do date maths.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=YEAR(K2)   =MONTH(K2)   =DAY(K2)
@@ -242,7 +282,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">PivotTables</span> Summarise without formulas <span class="tag">Intermediate</span></summary>
+    <details id="xl-pivottables" class="lesson"><summary><span class="caret">▸</span><span class="fn">PivotTables</span> Summarise without formulas <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>A PivotTable groups and totals data by drag-and-drop — no formulas needed. With the data selected: <strong>Insert ▸ PivotTable</strong>.</p>
       <table class="tbl">
@@ -263,7 +303,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Conditional formatting</span> Let the sheet flag things <span class="tag">Intermediate</span></summary>
+    <details id="xl-conditional-formatting" class="lesson"><summary><span class="caret">▸</span><span class="fn">Conditional formatting</span> Let the sheet flag things <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p><strong>Home ▸ Conditional Formatting</strong>. Colour cells by rule, add data bars or icon sets, or write a formula rule.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">// Highlight late deliveries — "Use a formula" rule, applied to the row:
@@ -276,7 +316,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
   <!-- ===================== ADVANCED ===================== -->
   <div data-tier-panel="x" data-tier="adv" class="tier-panel">
 
-    <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">FILTER</span> Return whole rows by condition <span class="tag">Advanced</span></summary>
+    <details id="xl-filter" class="lesson" open><summary><span class="caret">▸</span><span class="fn">FILTER</span> Return whole rows by condition <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>A dynamic array function: returns every row that matches, spilling automatically. No dragging.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=FILTER(A2:Q73, (F2:F73="EMEA")*(H2:H73="Delivered"),
@@ -291,7 +331,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">UNIQUE / SORT / SORTBY</span> Lists that maintain themselves <span class="tag">Advanced</span></summary>
+    <details id="xl-unique-sort-sortby" class="lesson"><summary><span class="caret">▸</span><span class="fn">UNIQUE / SORT / SORTBY</span> Lists that maintain themselves <span class="tag">Advanced</span></summary>
     <div class="body">
       <div class="code"><button class="copy">Copy</button><span class="code-text">=SORT(UNIQUE(B2:B73))                 // distinct customers, A–Z
 =SORTBY(A2:A73, O2:O73, -1)           // Order IDs sorted by revenue, high→low</span></div>
@@ -304,7 +344,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">LET</span> Name your steps <span class="tag">Advanced</span></summary>
+    <details id="xl-let" class="lesson"><summary><span class="caret">▸</span><span class="fn">LET</span> Name your steps <span class="tag">Advanced</span></summary>
     <div class="body">
       <p><strong>LET</strong> assigns names to intermediate results — formulas become readable and faster (each value is computed once).</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=LET(
@@ -317,7 +357,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       <div class="note"><span class="ic">i</span><div>Pattern: pairs of <em>name, value</em>, then a final expression that uses them.</div></div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">LAMBDA</span> Build your own function <span class="tag">Advanced</span></summary>
+    <details id="xl-lambda" class="lesson"><summary><span class="caret">▸</span><span class="fn">LAMBDA</span> Build your own function <span class="tag">Advanced</span></summary>
     <div class="body">
       <p><strong>LAMBDA</strong> turns a formula into a reusable function. Define it once in <em>Name Manager</em> (Formulas ▸ Define Name), then call it like any built-in.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">// Name: DaysLate   Refers to:
@@ -328,7 +368,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       <p>Pair with <strong>MAP</strong>, <strong>BYROW</strong> or <strong>REDUCE</strong> to apply a LAMBDA across a whole array at once.</p>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">SUMPRODUCT</span> Weighted &amp; multi-condition maths <span class="tag">Advanced</span></summary>
+    <details id="xl-sumproduct" class="lesson"><summary><span class="caret">▸</span><span class="fn">SUMPRODUCT</span> Weighted &amp; multi-condition maths <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>Multiplies arrays element-by-element then sums — great for weighted averages and conditions in older Excel.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=SUMPRODUCT((F2:F73="EMEA")*(H2:H73="Delivered")*O2:O73)
@@ -343,7 +383,7 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Tables &amp; structured references</span> Stop hard-coding ranges <span class="tag">Advanced</span></summary>
+    <details id="xl-tables-structured-references" class="lesson"><summary><span class="caret">▸</span><span class="fn">Tables &amp; structured references</span> Stop hard-coding ranges <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>Convert your range to a Table (<kbd>Ctrl</kbd>+<kbd>T</kbd>), name it <em>Projects</em>, and formulas read like English — and auto-expand when rows are added.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">=SUM(Projects[Revenue (EUR)])
@@ -356,9 +396,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== TIPS ===================== -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="tips-tricks"><div class="wrap">
   <span class="eyebrow">Tips &amp; tricks</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Small moves, big time savings</h2>
+  <h2>Small moves, big time savings</h2>
   <div class="grid cols-2">
     <div class="card"><h3>Flash Fill <kbd>Ctrl</kbd>+<kbd>E</kbd></h3><p>Type the result you want in one cell (e.g. an initials code), start the next, and Excel detects the pattern and fills the rest. Perfect for splitting or reformatting text without formulas.</p></div>
     <div class="card"><h3>Tables <kbd>Ctrl</kbd>+<kbd>T</kbd></h3><p>Turns a range into a self-expanding, filterable, named object. Formulas referencing it auto-grow with new rows.</p></div>
@@ -370,9 +410,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== WEB DATA ===================== -->
-<section><div class="wrap">
+<section id="data-from-the-web"><div class="wrap">
   <span class="eyebrow">Data from the web</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Pull live data into a sheet</h2>
+  <h2>Pull live data into a sheet</h2>
   <p class="lead">Excel can read tables straight off a web page or an online file and refresh them on demand — no copy-paste.</p>
   <div class="grid cols-2">
     <div class="card"><h3>From a web page</h3>
@@ -387,9 +427,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== POWER QUERY ===================== -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="power-query"><div class="wrap">
   <span class="eyebrow">Power Query</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Clean once, refresh forever</h2>
+  <h2>Clean once, refresh forever</h2>
   <p class="lead">Power Query (Data ▸ Get &amp; Transform) records every cleaning step you take. Next month, point it at the new file and click Refresh — all your steps replay automatically. This is the antidote to repetitive manual cleanup.</p>
 
   <div class="card" style="margin:18px 0">
@@ -434,9 +474,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== PIVOT TABLES ===================== -->
-<section><div class="wrap">
+<section id="pivottables"><div class="wrap">
   <span class="eyebrow">PivotTables</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .25em">PivotTables — OLAP on your desktop</h2>
+  <h2>PivotTables — OLAP on your desktop</h2>
   <p class="lead">A PivotTable is the fastest way to turn a flat sheet into answers — drag a field to summarise, with no formulas at all. It's also the clearest hands-on example of <strong>OLAP</strong>: you're slicing a <em>measure</em> (revenue, count) by <em>dimensions</em> (region, service, month). If the cube idea is new, read the <a href="data-foundations.html#olap">OLAP explanation in Foundations</a> first — this section is that theory made clickable.</p>
 
   <h3 style="margin-top:28px">The four drop zones — and their OLAP meaning</h3>
@@ -485,9 +525,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== GUIDED PRACTICE ===================== -->
-<section><div class="wrap">
+<section id="guided-practice"><div class="wrap">
   <span class="eyebrow">Guided practice</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Two workbooks, two kinds of drill</h2>
+  <h2>Two workbooks, two kinds of drill</h2>
   <p class="lead">Do these on your own first, then open the key. The key tells you <em>which</em> function or step solves it and why — that's the part worth remembering.</p>
 
   <div class="grid cols-2" style="margin:14px 0 26px">
@@ -575,9 +615,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== FORMULA RUNNER ===================== -->
-<section><div class="wrap">
+<section id="runner"><div class="wrap">
   <span class="eyebrow">Try it for real</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Formula runner</h2>
+  <h2>Formula runner</h2>
   <p class="lead">Type any Excel formula and run it against the live sample data — right here, no Excel needed. Great for testing a function before you trust it in a real sheet. Tip: <kbd>Ctrl/Cmd + Enter</kbd> runs.</p>
 
   <div class="play" id="xl-play">
@@ -602,9 +642,9 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 </div></section>
 
 <!-- ===================== EXAM ===================== -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="exam"><div class="wrap">
   <span class="eyebrow">Test yourself</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Excel final exam</h2>
+  <h2>Excel final exam</h2>
   <p class="lead">A proper, comprehensive test — <b>30 questions per attempt</b> drawn from a bank of 60+ covering references, conditional aggregation, lookups, text and dates, dynamic arrays, errors, PivotTables and OLAP. Ten of them ask you to <b>type a real formula</b> that we evaluate against the sample data and grade. Randomised every attempt, so retake it until it's second nature.</p>
   <div class="exam" data-bank="excelBank" data-count="30" data-formulas="10"></div>
 </div></section>
@@ -675,9 +715,24 @@ R2 :  =O2/$O$74      // then format column R as Percentage, fill down</span></di
 ]
 </script>
 
-<footer class="foot"><div class="wrap">
-  <p>Excel track · DPM Learning Hub. Cell references assume the sample workbook (Projects sheet, rows 2–73). <a href="powerbi.html">Next up: Power BI →</a></p>
+<!-- shell:footer -->
+<section class="pager-sec"><div class="wrap"><nav class="pager" aria-label="Tracks"><a class="prev" href="data-foundations.html"><small>← Previous track</small><b>Foundations</b></a><a class="next" href="sql.html"><small>Next track →</small><b>SQL</b></a></nav></div></section>
+</main>
+<div class="toc" data-toc hidden></div>
+<button class="to-top" type="button" aria-label="Back to top">↑</button>
+<footer class="site-footer"><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a>
+      <p style="max-width:40ch;margin-top:14px">A free, self-paced data analytics academy for Delivery Project Managers — and anyone who wants to get fluent with data.</p>
+    </div>
+    <div><h4>Learn</h4><ul><li><a href="data-foundations.html">Foundations</a></li><li><a href="excel.html">Excel</a></li><li><a href="sql.html">SQL</a></li><li><a href="powerbi.html">Power BI</a></li><li><a href="powerautomate.html">Power Automate</a></li></ul></div>
+    <div><h4>Practise</h4><ul><li><a href="dashboard.html">Live Dashboard</a></li><li><a href="excel.html#runner">Excel formula runner</a></li><li><a href="sql.html#runner">SQL runner</a></li><li><a href="powerbi.html#runner">DAX checker</a></li></ul></div>
+    <div><h4>Resources</h4><ul><li><a href="downloads.html">Cheat sheets</a></li><li><a href="downloads.html#sample-data">Practice datasets</a></li><li><a href="courses.html">Courses &amp; certifications</a></li><li><a href="index.html#plan">Study plan</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>All sample data is fictional and for training only.</span><span>Press <kbd>/</kbd> to search · progress is stored only in your browser</span></div>
 </div></footer>
+<!-- /shell:footer -->
 
 <script src="assets/js/sample-data.js"></script>
 <script src="assets/js/excel-engine.js"></script>

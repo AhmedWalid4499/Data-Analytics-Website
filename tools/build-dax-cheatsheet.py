@@ -1,3 +1,4 @@
+import os
 from cs_common import build_cheatsheet
 
 S = [
@@ -171,7 +172,7 @@ S = [
 ]
 
 build_cheatsheet(
-    "/mnt/user-data/outputs/DAX-PowerBI-Cheat-Sheet.pdf",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "docs", "DAX-PowerBI-Cheat-Sheet.pdf"),
     "Power BI & DAX Cheat Sheet",
     "A double-sided quick reference  ·  DPM Learning Hub",
     S,

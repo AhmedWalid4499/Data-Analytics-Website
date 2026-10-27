@@ -3,31 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- shell:head -->
 <title>Power BI — DPM Learning Hub</title>
+<meta name="description" content="Model, write DAX and build dashboards.">
+<meta name="theme-color" content="#0E1729">
+<meta property="og:title" content="Power BI — DPM Learning Hub">
+<meta property="og:description" content="Model, write DAX and build dashboards.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E1729'/%3E%3Crect x='7' y='17' width='4' height='8' rx='1.5' fill='%23FF9A4D'/%3E%3Crect x='14' y='11' width='4' height='14' rx='1.5' fill='%23B9A0FF'/%3E%3Crect x='21' y='6' width='4' height='19' rx='1.5' fill='%234FD1EA'/%3E%3C/svg%3E">
+<script>(function(){try{var m=JSON.parse(localStorage.getItem('dpm-mode'));if(m)document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<!-- /shell:head -->
 </head>
-<body data-theme="powerbi">
-<div class="scrollbar"></div>
-
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="dot"></span> DPM Learning Hub</a>
-  <button class="menu-btn" aria-label="Menu">☰</button>
-  <div class="nav-links">
+<body data-theme="powerbi" data-track="powerbi">
+<!-- shell:header -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="scrollbar" aria-hidden="true"></div>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="DPM Learning Hub — home"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span><span>DPM Learning Hub<small>Data analytics academy</small></span></a>
+  <nav class="main-nav" aria-label="Main">
     <a href="index.html">Home</a>
-    <a href="data-foundations.html">Foundations</a>
-    <a href="excel.html">Excel</a>
-    <a href="sql.html">SQL</a>
-    <a href="powerbi.html" aria-current="page">Power BI</a>
-    <a href="powerautomate.html">Power Automate</a>
+    <div class="menu">
+      <button class="menu-trigger current" aria-expanded="false" aria-haspopup="true">Learn <span class="chev" aria-hidden="true">▾</span></button>
+      <div class="mega"><a href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span><span><b>01 · Foundations</b><span class="d">Tables, keys, schemas & OLAP — the groundwork</span></span></a><a href="excel.html"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span><span><b>02 · Excel</b><span class="d">Formulas, lookups, PivotTables & Power Query</span></span></a><a href="sql.html"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span><span><b>03 · SQL</b><span class="d">Query real data live in your browser</span></span></a><a href="powerbi.html" aria-current="page"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span><span><b>04 · Power BI</b><span class="d">Model, write DAX and build dashboards</span></span></a><a href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span><span><b>05 · Power Automate</b><span class="d">Automate reports, alerts & approvals</span></span></a>
+        <div class="mega-foot"><a href="index.html#path">See the recommended path →</a><a href="downloads.html">Cheat sheets &amp; datasets →</a></div>
+      </div>
+    </div>
+    <a href="dashboard.html">Live Dashboard</a>
     <a href="courses.html">Courses</a>
     <a href="downloads.html">Downloads</a>
+  </nav>
+  <div class="header-tools">
+    <button class="search-btn" type="button" data-search-open aria-label="Search the hub"><span class="s-icon" aria-hidden="true">⌕</span><span class="s-label">Search lessons…</span><kbd><span class="kbd-mod">Ctrl</span> K</kbd></button>
+    <button class="icon-btn" type="button" data-mode-toggle aria-label="Toggle dark mode"><svg class="mode-ic-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="mode-ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="icon-btn drawer-btn" type="button" data-drawer-toggle aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">☰</button>
   </div>
-</div></nav>
+</div></header>
+<div class="drawer" id="site-drawer">
+  <div class="drawer-backdrop" data-drawer-close></div>
+  <div class="drawer-panel" role="dialog" aria-label="Menu">
+    <div class="drawer-top"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a><button class="icon-btn" type="button" data-drawer-close aria-label="Close menu">✕</button></div>
+    <button class="search-btn" type="button" data-search-open style="width:100%"><span class="s-icon" aria-hidden="true">⌕</span>Search lessons…</button>
+    <h4>Start</h4>
+    <a class="d-link" href="index.html">Home</a>
+    <a class="d-link" href="dashboard.html">Live Dashboard</a>
+    <h4>Learning tracks</h4>
+    <a class="d-link" href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span>Foundations</a><a class="d-link" href="excel.html"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span>Excel</a><a class="d-link" href="sql.html"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span>SQL</a><a class="d-link" href="powerbi.html" aria-current="page"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span>Power BI</a><a class="d-link" href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span>Power Automate</a>
+    <h4>Resources</h4>
+    <a class="d-link" href="courses.html">Courses &amp; certifications</a>
+    <a class="d-link" href="downloads.html">Downloads</a>
+  </div>
+</div>
+<!-- /shell:header -->
+<main id="main">
 
 <header class="hero"><div class="wrap">
+  <!-- shell:crumbs --><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="index.html#tracks">Learn</a><span class="sep">/</span><span aria-current="page">Power BI</span><span class="sep">·</span><span>Track 4 of 5</span></nav><!-- /shell:crumbs -->
   <span class="tool-badge"><span class="glyph" style="color:#1a1a1a">▮</span> Microsoft Power BI</span>
   <h1>Turn the same data<br>into a dashboard<br>people act on.</h1>
   <p class="lead">Power BI takes the workbook you've been using and makes it interactive: relationships between tables, calculations that respond to clicks, and visuals chosen on purpose. This track follows the real build order — get data, shape it, model it, write DAX, then visualize.</p>
@@ -36,11 +69,18 @@
     <a class="dl ghost" href="assets/data/dpm_projects.csv" download>⬇ CSV</a>
   </div>
   <p class="hint" style="color:var(--muted);font-size:.9rem;margin-top:14px">Get it free: install <strong>Power BI Desktop</strong> from the Microsoft Store, then <em>Get Data ▸ Excel</em> and pick the Projects sheet.</p>
+<!-- shell:progress -->
+  <div class="track-progress" data-progress="powerbi" hidden>
+    <div class="tp-row"><span><b>Your progress</b> · saved in this browser</span><span class="pbar-txt"></span></div>
+    <div class="pbar"><span class="pbar-fill"></span></div>
+    <p data-exam-best="powerbi" hidden></p>
+  </div>
+<!-- /shell:progress -->
 </div></header>
 
 <!-- DOWNLOAD -->
 <section><div class="wrap">
-  <div class="card" style="border-left:4px solid var(--accent);display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+  <div class="callout">
     <div style="flex:1 1 340px">
       <h3 style="margin:0 0 .3em">Grab the printable cheat sheet</h3>
       <p style="margin:0;color:var(--ink-soft)">A dense, two-page Power BI &amp; DAX reference — modelling, CALCULATE and filter context, time intelligence, the chart chooser and performance tips — in the style of the classic R/RStudio cards.</p>
@@ -50,9 +90,9 @@
 </div></section>
 
 <!-- LESSONS BY LEVEL -->
-<section><div class="wrap">
+<section id="power-bi-by-level"><div class="wrap">
   <span class="eyebrow">Power BI by level</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .2em">Learn it in the build order</h2>
+  <h2>Learn it in the build order</h2>
   <p class="lead">Power BI follows a pipeline: get data, shape it, model it, write DAX, then visualize. This track is split into <strong>three levels</strong> — tap any card to switch. Each lesson has worked examples on the sample workbook and a task to try before you reveal the answer.</p>
   <div class="tiers" data-tiers="p" role="tablist">
     <button class="tier-btn" data-tier="basic" aria-selected="true" role="tab"><span class="lvl">1</span><span class="tier-txt"><b>Basics</b><small>What it is &amp; getting data</small></span></button>
@@ -61,7 +101,7 @@
   </div>
 
   <div data-tier-panel="p" data-tier="basic" class="tier-panel active">
-    <details class="lesson open"><summary><span class="caret">▸</span><span class="fn">Orientation</span> Desktop, Service &amp; the build order <span class="tag">Basics</span></summary>
+    <details id="pbi-orientation" class="lesson" open><summary><span class="caret">▸</span><span class="fn">Orientation</span> Desktop, Service &amp; the build order <span class="tag">Basics</span></summary>
     <div class="body">
 <div class="grid cols-2">
     <div class="card"><h3>Desktop vs Service</h3><p><strong>Power BI Desktop</strong> (free, on your PC) is where you build. <strong>Power BI Service</strong> (powerbi.com) is where you <em>publish</em> so others can view and where scheduled refresh lives.</p></div>
@@ -77,7 +117,7 @@
     <div class="step"><b>6 · PUBLISH</b> Push to the Service, schedule refresh, share</div>
   </div>
     </div></details>
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Power Query</span> Get &amp; shape the data <span class="tag">Basics</span></summary>
+    <details id="pbi-power-query" class="lesson"><summary><span class="caret">▸</span><span class="fn">Power Query</span> Get &amp; shape the data <span class="tag">Basics</span></summary>
     <div class="body">
 <p class="lead">It's the <em>same</em> Power Query as Excel — Home ▸ Transform data. This is where you manipulate columns and rows before anything reaches a chart.</p>
   <table class="tbl">
@@ -98,7 +138,7 @@
   </div>
 
   <div data-tier-panel="p" data-tier="inter" class="tier-panel">
-    <details class="lesson open"><summary><span class="caret">▸</span><span class="fn">Data model</span> Relationships &amp; the star schema <span class="tag">Model</span></summary>
+    <details id="pbi-data-model" class="lesson" open><summary><span class="caret">▸</span><span class="fn">Data model</span> Relationships &amp; the star schema <span class="tag">Model</span></summary>
     <div class="body">
 <p class="lead">In the Model view you connect tables so a filter on one flows to another. The clean pattern is a <strong>star schema</strong>: one central <em>fact</em> table of events surrounded by <em>dimension</em> tables that describe them.</p>
   <div class="grid cols-2">
@@ -107,7 +147,7 @@
   </div>
   <div class="note"><span class="ic">★</span><div>Almost always add a dedicated <strong>Date table</strong> and relate it to your date column. Time-intelligence DAX (YTD, prior month) depends on it.</div></div>
     </div></details>
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Chart chooser</span> Pick the visual by the question <span class="tag">Visualize</span></summary>
+    <details id="pbi-chart-chooser" class="lesson"><summary><span class="caret">▸</span><span class="fn">Chart chooser</span> Pick the visual by the question <span class="tag">Visualize</span></summary>
     <div class="body">
 <p class="lead">A chart's job is to make one comparison obvious. Pick by the <em>question</em> you're answering — not by what looks fanciest. Here's when each earns its place, and when it misleads.</p>
 
@@ -172,7 +212,7 @@
   </div>
 
   <div data-tier-panel="p" data-tier="adv" class="tier-panel">
-    <details class="lesson open"><summary><span class="caret">▸</span><span class="fn">DAX</span> Measures that react to filters <span class="tag">DAX</span></summary>
+    <details id="pbi-dax" class="lesson" open><summary><span class="caret">▸</span><span class="fn">DAX</span> Measures that react to filters <span class="tag">DAX</span></summary>
     <div class="body">
 <p class="lead">DAX (Data Analysis Expressions) is the formula language. The single most important distinction:</p>
   <div class="grid cols-2" style="margin:6px 0 8px">
@@ -223,9 +263,9 @@ Avg Delivered Rev  = DIVIDE(
 </div></section>
 
 <!-- GOOD HABITS -->
-<section style="background:var(--surface)"><div class="wrap">
+<section style="background:var(--surface)" id="good-habits"><div class="wrap">
   <span class="eyebrow">Good habits</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">What separates a clean report</h2>
+  <h2>What separates a clean report</h2>
   <div class="deflist">
     <div class="d"><b>Measures, not columns</b> — if a total or average should react to slicers, it's a measure. Reserve calculated columns for row-level attributes you group or filter by.</div>
     <div class="d"><b>Star schema first</b> — one fact table surrounded by dimensions. The engine and DAX are built for it; a single flat table fights you later.</div>
@@ -237,9 +277,9 @@ Avg Delivered Rev  = DIVIDE(
 </div></section>
 
 <!-- DAX VALIDATOR -->
-<section style="background:var(--surface)"><div class="wrap">
+<section style="background:var(--surface)" id="runner"><div class="wrap">
   <span class="eyebrow">Try it for real</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">DAX checker</h2>
+  <h2>DAX checker</h2>
   <p class="lead">Write a measure and have it checked for syntax and common mistakes. DAX needs a live Power BI model to actually calculate, so this is a <b>syntax &amp; style check</b> — it catches unbalanced brackets, unknown functions and habits worth fixing, against a model with tables <code>Fact_Orders</code> and <code>Dim_Region</code>.</p>
 
   <div class="play" id="dax-play">
@@ -260,9 +300,9 @@ Avg Delivered Rev  = DIVIDE(
 </div></section>
 
 <!-- EXAM -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="exam"><div class="wrap">
   <span class="eyebrow">Test yourself</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Power BI final exam</h2>
+  <h2>Power BI final exam</h2>
   <p class="lead">A randomised mix across the whole track — modelling, DAX, visuals and the get/transform/publish flow. Retake it; the questions reshuffle each time.</p>
   <div class="exam" data-bank="powerbiBank" data-count="8"></div>
 </div></section>
@@ -284,9 +324,24 @@ Avg Delivered Rev  = DIVIDE(
 ]
 </script>
 
-<footer class="foot"><div class="wrap">
-  <p>Power BI track · DPM Learning Hub. Build order: get → transform → model → DAX → visualize → publish. <a href="powerautomate.html">Next up: Power Automate →</a></p>
+<!-- shell:footer -->
+<section class="pager-sec"><div class="wrap"><nav class="pager" aria-label="Tracks"><a class="prev" href="sql.html"><small>← Previous track</small><b>SQL</b></a><a class="next" href="powerautomate.html"><small>Next track →</small><b>Power Automate</b></a></nav></div></section>
+</main>
+<div class="toc" data-toc hidden></div>
+<button class="to-top" type="button" aria-label="Back to top">↑</button>
+<footer class="site-footer"><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a>
+      <p style="max-width:40ch;margin-top:14px">A free, self-paced data analytics academy for Delivery Project Managers — and anyone who wants to get fluent with data.</p>
+    </div>
+    <div><h4>Learn</h4><ul><li><a href="data-foundations.html">Foundations</a></li><li><a href="excel.html">Excel</a></li><li><a href="sql.html">SQL</a></li><li><a href="powerbi.html">Power BI</a></li><li><a href="powerautomate.html">Power Automate</a></li></ul></div>
+    <div><h4>Practise</h4><ul><li><a href="dashboard.html">Live Dashboard</a></li><li><a href="excel.html#runner">Excel formula runner</a></li><li><a href="sql.html#runner">SQL runner</a></li><li><a href="powerbi.html#runner">DAX checker</a></li></ul></div>
+    <div><h4>Resources</h4><ul><li><a href="downloads.html">Cheat sheets</a></li><li><a href="downloads.html#sample-data">Practice datasets</a></li><li><a href="courses.html">Courses &amp; certifications</a></li><li><a href="index.html#plan">Study plan</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>All sample data is fictional and for training only.</span><span>Press <kbd>/</kbd> to search · progress is stored only in your browser</span></div>
 </div></footer>
+<!-- /shell:footer -->
 
 <script src="assets/js/dax-validator.js"></script>
 <script src="assets/js/playground.js"></script>

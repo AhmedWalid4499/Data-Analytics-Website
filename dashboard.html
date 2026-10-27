@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- shell:head -->
+<title>Live Dashboard — DPM Learning Hub</title>
+<meta name="description" content="An interactive analytics dashboard built on the training dataset — filter it, explore it, and see the Excel, SQL and DAX behind every chart.">
+<meta name="theme-color" content="#0E1729">
+<meta property="og:title" content="Live Dashboard — DPM Learning Hub">
+<meta property="og:description" content="An interactive analytics dashboard built on the training dataset — filter it, explore it, and see the Excel, SQL and DAX behind every chart.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E1729'/%3E%3Crect x='7' y='17' width='4' height='8' rx='1.5' fill='%23FF9A4D'/%3E%3Crect x='14' y='11' width='4' height='14' rx='1.5' fill='%23B9A0FF'/%3E%3Crect x='21' y='6' width='4' height='19' rx='1.5' fill='%234FD1EA'/%3E%3C/svg%3E">
+<script>(function(){try{var m=JSON.parse(localStorage.getItem('dpm-mode'));if(m)document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- /shell:head -->
+</head>
+<body data-theme="hub">
+<!-- shell:header -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="scrollbar" aria-hidden="true"></div>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="DPM Learning Hub — home"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span><span>DPM Learning Hub<small>Data analytics academy</small></span></a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <div class="menu">
+      <button class="menu-trigger" aria-expanded="false" aria-haspopup="true">Learn <span class="chev" aria-hidden="true">▾</span></button>
+      <div class="mega"><a href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span><span><b>01 · Foundations</b><span class="d">Tables, keys, schemas & OLAP — the groundwork</span></span></a><a href="excel.html"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span><span><b>02 · Excel</b><span class="d">Formulas, lookups, PivotTables & Power Query</span></span></a><a href="sql.html"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span><span><b>03 · SQL</b><span class="d">Query real data live in your browser</span></span></a><a href="powerbi.html"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span><span><b>04 · Power BI</b><span class="d">Model, write DAX and build dashboards</span></span></a><a href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span><span><b>05 · Power Automate</b><span class="d">Automate reports, alerts & approvals</span></span></a>
+        <div class="mega-foot"><a href="index.html#path">See the recommended path →</a><a href="downloads.html">Cheat sheets &amp; datasets →</a></div>
+      </div>
+    </div>
+    <a href="dashboard.html" aria-current="page">Live Dashboard</a>
+    <a href="courses.html">Courses</a>
+    <a href="downloads.html">Downloads</a>
+  </nav>
+  <div class="header-tools">
+    <button class="search-btn" type="button" data-search-open aria-label="Search the hub"><span class="s-icon" aria-hidden="true">⌕</span><span class="s-label">Search lessons…</span><kbd><span class="kbd-mod">Ctrl</span> K</kbd></button>
+    <button class="icon-btn" type="button" data-mode-toggle aria-label="Toggle dark mode"><svg class="mode-ic-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="mode-ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="icon-btn drawer-btn" type="button" data-drawer-toggle aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">☰</button>
+  </div>
+</div></header>
+<div class="drawer" id="site-drawer">
+  <div class="drawer-backdrop" data-drawer-close></div>
+  <div class="drawer-panel" role="dialog" aria-label="Menu">
+    <div class="drawer-top"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a><button class="icon-btn" type="button" data-drawer-close aria-label="Close menu">✕</button></div>
+    <button class="search-btn" type="button" data-search-open style="width:100%"><span class="s-icon" aria-hidden="true">⌕</span>Search lessons…</button>
+    <h4>Start</h4>
+    <a class="d-link" href="index.html">Home</a>
+    <a class="d-link" href="dashboard.html" aria-current="page">Live Dashboard</a>
+    <h4>Learning tracks</h4>
+    <a class="d-link" href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span>Foundations</a><a class="d-link" href="excel.html"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span>Excel</a><a class="d-link" href="sql.html"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span>SQL</a><a class="d-link" href="powerbi.html"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span>Power BI</a><a class="d-link" href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span>Power Automate</a>
+    <h4>Resources</h4>
+    <a class="d-link" href="courses.html">Courses &amp; certifications</a>
+    <a class="d-link" href="downloads.html">Downloads</a>
+  </div>
+</div>
+<!-- /shell:header -->
+<main id="main">
+
+<header class="hero dash-hero"><div class="wrap">
+  <!-- shell:crumbs --><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Live Dashboard</span></nav><!-- /shell:crumbs -->
+  <span class="tool-badge"><span class="glyph">★</span> Capstone · interactive</span>
+  <h1>Delivery performance dashboard</h1>
+  <p class="lead">This is what the tracks build toward. Every number is computed live from the 72-order training dataset. Filter it, click any bar to drill in, sort and export the rows — and press <b>Show the formula</b> on any chart to see how you'd build it in Excel, SQL and DAX.</p>
+</div></header>
+
+<div class="filters" role="region" aria-label="Filters"><div class="wrap">
+  <div class="fld"><label for="f-region">Region</label><select id="f-region" data-col="5"></select></div>
+  <div class="fld"><label for="f-service">Service type</label><select id="f-service" data-col="6"></select></div>
+  <div class="fld"><label for="f-status">Status</label><select id="f-status" data-col="7"></select></div>
+  <div class="fld"><label for="f-priority">Priority</label><select id="f-priority" data-col="16"></select></div>
+  <div class="fld"><label for="f-customer">Customer</label><select id="f-customer" data-col="1"></select></div>
+  <div class="fld"><label for="f-dpm">DPM</label><select id="f-dpm" data-col="8"></select></div>
+  <button class="btn ghost" type="button" id="f-reset">Reset</button>
+  <p class="filter-note" id="f-note" aria-live="polite"></p>
+</div></div>
+
+<section class="dash" id="overview"><div class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panels">
+    <div class="panel" data-panel="customer">
+      <div class="panel-head"><div><h3>Revenue by customer</h3><p class="sub">EUR, sorted high → low · click a bar to filter</p></div><button class="how-btn" type="button" aria-expanded="false">Show the formula</button></div>
+      <div class="how"></div>
+      <div class="chart" id="c-customer"></div>
+    </div>
+
+    <div class="panel" data-panel="region">
+      <div class="panel-head"><div><h3>Revenue vs target by region</h3><p class="sub">Bar = actual revenue · line = target</p></div><button class="how-btn" type="button" aria-expanded="false">Show the formula</button></div>
+      <div class="how"></div>
+      <div class="chart" id="c-region"></div>
+      <div class="legend-key"><span><i></i>Actual revenue</span><span><i class="tick"></i>Revenue target</span></div>
+    </div>
+
+    <div class="panel wide" data-panel="month">
+      <div class="panel-head"><div><h3>Orders placed per month</h3><p class="sub">Count of orders by order date · hover for detail</p></div><button class="how-btn" type="button" aria-expanded="false">Show the formula</button></div>
+      <div class="how"></div>
+      <div class="chart" id="c-month"></div>
+    </div>
+
+    <div class="panel" data-panel="status">
+      <div class="panel-head"><div><h3>Orders by status</h3><p class="sub">Where every order sits today · click to filter</p></div><button class="how-btn" type="button" aria-expanded="false">Show the formula</button></div>
+      <div class="how"></div>
+      <div class="chart" id="c-status"></div>
+    </div>
+
+    <div class="panel" data-panel="service">
+      <div class="panel-head"><div><h3>Average effort by service type</h3><p class="sub">Mean FTE days per order · click to filter</p></div><button class="how-btn" type="button" aria-expanded="false">Show the formula</button></div>
+      <div class="how"></div>
+      <div class="chart" id="c-service"></div>
+    </div>
+
+    <div class="panel wide" data-panel="dpm">
+      <div class="panel-head"><div><h3>Workload by DPM</h3><p class="sub">Number of orders each Delivery PM owns · click to filter</p></div><button class="how-btn" type="button" aria-expanded="false">Show the formula</button></div>
+      <div class="how"></div>
+      <div class="chart" id="c-dpm"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="explorer"><div class="wrap">
+  <span class="eyebrow">Data explorer</span>
+  <h2>Every row behind the charts</h2>
+  <p class="lead">The table follows the filters above. Click a column header to sort, type to search across every column, and export exactly what you see to CSV for Excel or Power BI.</p>
+  <div class="explorer-tools">
+    <input type="search" id="x-search" placeholder="Search customers, cities, engineers…" aria-label="Search rows">
+    <span class="legend" id="x-count" aria-live="polite"></span>
+    <button class="btn ghost" type="button" id="x-export">⬇ Export CSV</button>
+  </div>
+  <div class="dtbl-wrap"><table class="dtbl" id="x-table"></table></div>
+</div></section>
+
+<section id="next" style="background:var(--surface-2)"><div class="wrap">
+  <span class="eyebrow">Build it yourself</span>
+  <h2>Everything on this page, you'll learn to make</h2>
+  <div class="grid cols-3" style="margin-top:20px">
+    <a class="card tool-card" href="excel.html" style="--c:var(--c-excel)"><span class="chip" style="background:var(--c-excel)">Excel</span><h3>SUMIFS &amp; PivotTables</h3><p>Every KPI tile is a SUMIFS or COUNTIFS; every chart is a PivotTable away.</p><span class="arrow">Open the Excel track</span></a>
+    <a class="card tool-card" href="sql.html" style="--c:var(--c-sql)"><span class="chip" style="background:var(--c-sql)">SQL</span><h3>GROUP BY &amp; JOIN</h3><p>Each chart is one GROUP BY query — the target line is a JOIN to the <code>targets</code> table.</p><span class="arrow">Open the SQL track</span></a>
+    <a class="card tool-card" href="powerbi.html" style="--c:var(--c-powerbi)"><span class="chip" style="background:var(--c-powerbi);color:#1a1a1a">Power BI</span><h3>Measures &amp; slicers</h3><p>The filters are slicers, the KPIs are DAX measures, the click-to-filter is cross-highlighting.</p><span class="arrow">Open the Power BI track</span></a>
+  </div>
+</div></section>
+
+<!-- shell:footer -->
+</main>
+<div class="toc" data-toc hidden></div>
+<button class="to-top" type="button" aria-label="Back to top">↑</button>
+<footer class="site-footer"><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a>
+      <p style="max-width:40ch;margin-top:14px">A free, self-paced data analytics academy for Delivery Project Managers — and anyone who wants to get fluent with data.</p>
+    </div>
+    <div><h4>Learn</h4><ul><li><a href="data-foundations.html">Foundations</a></li><li><a href="excel.html">Excel</a></li><li><a href="sql.html">SQL</a></li><li><a href="powerbi.html">Power BI</a></li><li><a href="powerautomate.html">Power Automate</a></li></ul></div>
+    <div><h4>Practise</h4><ul><li><a href="dashboard.html">Live Dashboard</a></li><li><a href="excel.html#runner">Excel formula runner</a></li><li><a href="sql.html#runner">SQL runner</a></li><li><a href="powerbi.html#runner">DAX checker</a></li></ul></div>
+    <div><h4>Resources</h4><ul><li><a href="downloads.html">Cheat sheets</a></li><li><a href="downloads.html#sample-data">Practice datasets</a></li><li><a href="courses.html">Courses &amp; certifications</a></li><li><a href="index.html#plan">Study plan</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>All sample data is fictional and for training only.</span><span>Press <kbd>/</kbd> to search · progress is stored only in your browser</span></div>
+</div></footer>
+<!-- /shell:footer -->
+
+<script src="assets/js/sample-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

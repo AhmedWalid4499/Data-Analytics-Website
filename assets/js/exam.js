@@ -219,6 +219,7 @@
           sc.style.display = 'inline';
           sc.innerHTML = 'Score: <span class="pct">' + correct + '/' + picked.length + ' (' + pct + '%)</span> - ' + msg;
           sc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          document.dispatchEvent(new CustomEvent('dpm:exam', { detail: { pct: pct, correct: correct, total: picked.length } }));
         }
       });
     }

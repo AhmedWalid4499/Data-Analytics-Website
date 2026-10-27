@@ -3,39 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- shell:head -->
 <title>SQL — DPM Learning Hub</title>
+<meta name="description" content="Query real data live in your browser.">
+<meta name="theme-color" content="#0E1729">
+<meta property="og:title" content="SQL — DPM Learning Hub">
+<meta property="og:description" content="Query real data live in your browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E1729'/%3E%3Crect x='7' y='17' width='4' height='8' rx='1.5' fill='%23FF9A4D'/%3E%3Crect x='14' y='11' width='4' height='14' rx='1.5' fill='%23B9A0FF'/%3E%3Crect x='21' y='6' width='4' height='19' rx='1.5' fill='%234FD1EA'/%3E%3C/svg%3E">
+<script>(function(){try{var m=JSON.parse(localStorage.getItem('dpm-mode'));if(m)document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<!-- /shell:head -->
 </head>
-<body data-theme="sql">
-<div class="scrollbar"></div>
-
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="dot"></span> DPM Learning Hub</a>
-  <button class="menu-btn" aria-label="Menu">☰</button>
-  <div class="nav-links">
+<body data-theme="sql" data-track="sql">
+<!-- shell:header -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="scrollbar" aria-hidden="true"></div>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="DPM Learning Hub — home"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span><span>DPM Learning Hub<small>Data analytics academy</small></span></a>
+  <nav class="main-nav" aria-label="Main">
     <a href="index.html">Home</a>
-    <a href="data-foundations.html">Foundations</a>
-    <a href="excel.html">Excel</a>
-    <a href="sql.html" aria-current="page">SQL</a>
-    <a href="powerbi.html">Power BI</a>
-    <a href="powerautomate.html">Power Automate</a>
+    <div class="menu">
+      <button class="menu-trigger current" aria-expanded="false" aria-haspopup="true">Learn <span class="chev" aria-hidden="true">▾</span></button>
+      <div class="mega"><a href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span><span><b>01 · Foundations</b><span class="d">Tables, keys, schemas & OLAP — the groundwork</span></span></a><a href="excel.html"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span><span><b>02 · Excel</b><span class="d">Formulas, lookups, PivotTables & Power Query</span></span></a><a href="sql.html" aria-current="page"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span><span><b>03 · SQL</b><span class="d">Query real data live in your browser</span></span></a><a href="powerbi.html"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span><span><b>04 · Power BI</b><span class="d">Model, write DAX and build dashboards</span></span></a><a href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span><span><b>05 · Power Automate</b><span class="d">Automate reports, alerts & approvals</span></span></a>
+        <div class="mega-foot"><a href="index.html#path">See the recommended path →</a><a href="downloads.html">Cheat sheets &amp; datasets →</a></div>
+      </div>
+    </div>
+    <a href="dashboard.html">Live Dashboard</a>
     <a href="courses.html">Courses</a>
     <a href="downloads.html">Downloads</a>
+  </nav>
+  <div class="header-tools">
+    <button class="search-btn" type="button" data-search-open aria-label="Search the hub"><span class="s-icon" aria-hidden="true">⌕</span><span class="s-label">Search lessons…</span><kbd><span class="kbd-mod">Ctrl</span> K</kbd></button>
+    <button class="icon-btn" type="button" data-mode-toggle aria-label="Toggle dark mode"><svg class="mode-ic-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="mode-ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="icon-btn drawer-btn" type="button" data-drawer-toggle aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">☰</button>
   </div>
-</div></nav>
+</div></header>
+<div class="drawer" id="site-drawer">
+  <div class="drawer-backdrop" data-drawer-close></div>
+  <div class="drawer-panel" role="dialog" aria-label="Menu">
+    <div class="drawer-top"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a><button class="icon-btn" type="button" data-drawer-close aria-label="Close menu">✕</button></div>
+    <button class="search-btn" type="button" data-search-open style="width:100%"><span class="s-icon" aria-hidden="true">⌕</span>Search lessons…</button>
+    <h4>Start</h4>
+    <a class="d-link" href="index.html">Home</a>
+    <a class="d-link" href="dashboard.html">Live Dashboard</a>
+    <h4>Learning tracks</h4>
+    <a class="d-link" href="data-foundations.html"><span class="tdot" style="--c:var(--c-data)" aria-hidden="true">DB</span>Foundations</a><a class="d-link" href="excel.html"><span class="tdot" style="--c:var(--c-excel)" aria-hidden="true">XL</span>Excel</a><a class="d-link" href="sql.html" aria-current="page"><span class="tdot" style="--c:var(--c-sql)" aria-hidden="true">SQL</span>SQL</a><a class="d-link" href="powerbi.html"><span class="tdot powerbi" style="--c:var(--c-powerbi)" aria-hidden="true">BI</span>Power BI</a><a class="d-link" href="powerautomate.html"><span class="tdot" style="--c:var(--c-flow)" aria-hidden="true">PA</span>Power Automate</a>
+    <h4>Resources</h4>
+    <a class="d-link" href="courses.html">Courses &amp; certifications</a>
+    <a class="d-link" href="downloads.html">Downloads</a>
+  </div>
+</div>
+<!-- /shell:header -->
+<main id="main">
 
 <header class="hero"><div class="wrap">
+  <!-- shell:crumbs --><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="index.html#tracks">Learn</a><span class="sep">/</span><span aria-current="page">SQL</span><span class="sep">·</span><span>Track 3 of 5</span></nav><!-- /shell:crumbs -->
   <span class="tool-badge"><span class="glyph">⌘</span> SQL</span>
   <h1>Ask your data<br>questions directly.</h1>
   <p class="lead">SQL is how you pull, filter and summarise data straight from the source — the language behind almost every database, dashboard and report. This page teaches the core clauses, then lets you <b>run real queries in your browser</b> against the same DPM delivery dataset used across the hub. No setup, nothing to install.</p>
+<!-- shell:progress -->
+  <div class="track-progress" data-progress="sql" hidden>
+    <div class="tp-row"><span><b>Your progress</b> · saved in this browser</span><span class="pbar-txt"></span></div>
+    <div class="pbar"><span class="pbar-fill"></span></div>
+    <p data-exam-best="sql" hidden></p>
+  </div>
+<!-- /shell:progress -->
 </div></header>
 
 <!-- DOWNLOADS -->
 <section><div class="wrap">
-  <div class="card" style="border-left:4px solid var(--accent);display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+  <div class="callout">
     <div style="flex:1 1 340px">
       <h3 style="margin:0 0 .3em">Take SQL with you</h3>
       <p style="margin:0;color:var(--ink-soft)">A printable two-page cheat sheet for quick reference — clauses, joins, aggregates, window functions and common patterns, in the style of the classic R/RStudio cards. Plus a step-by-step guide to installing SQL Server on Windows when you're ready to leave the browser.</p>
@@ -48,9 +88,9 @@
 </div></section>
 
 <!-- THE DATA -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="your-tables"><div class="wrap">
   <span class="eyebrow">Your tables</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .35em">Two tables to play with</h2>
+  <h2>Two tables to play with</h2>
   <p class="lead" style="max-width:70ch">The runner below loads a table called <code>orders</code> (72 delivery orders) and a small <code>targets</code> table (revenue target per region) so you can practise joins.</p>
   <div class="grid cols-2">
     <div class="card"><h3 style="margin-top:0"><code>orders</code></h3>
@@ -68,9 +108,9 @@
 </div></section>
 
 <!-- CLAUSES BY LEVEL -->
-<section><div class="wrap">
+<section id="clauses-by-level"><div class="wrap">
   <span class="eyebrow">Clauses by level</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .2em">Build your SQL vocabulary</h2>
+  <h2>Build your SQL vocabulary</h2>
   <p class="lead">SQL reads and summarises data in <b>relational tables</b> — the model from the <a href="data-foundations.html">Foundations</a> page. This track is split into <strong>three levels</strong> — tap any card to switch. Start at Level 1 and climb. Each clause has a worked example on the <code>orders</code> table and a task to try yourself — paste your answer into the <a href="#runner">runner below</a> to check it.</p>
 
   <div class="tiers" data-tiers="s" role="tablist">
@@ -91,7 +131,7 @@
   <!-- ===================== BASIC ===================== -->
   <div data-tier-panel="s" data-tier="basic" class="tier-panel active">
 
-    <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">SELECT / FROM</span> Choose columns <span class="tag">Basic</span></summary>
+    <details id="sql-select-from" class="lesson" open><summary><span class="caret">▸</span><span class="fn">SELECT / FROM</span> Choose columns <span class="tag">Basic</span></summary>
     <div class="body">
       <p>Pick the columns you want from a table. <code>*</code> means "all columns"; otherwise list names separated by commas.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT customer, region, revenue
@@ -106,7 +146,7 @@ FROM orders;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">WHERE</span> Filter rows <span class="tag">Basic</span></summary>
+    <details id="sql-where" class="lesson"><summary><span class="caret">▸</span><span class="fn">WHERE</span> Filter rows <span class="tag">Basic</span></summary>
     <div class="body">
       <p>Keep only the rows that match a condition. Text values go in <code>'single quotes'</code>.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT customer, revenue
@@ -123,7 +163,7 @@ WHERE region = 'APAC';</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">ORDER BY / LIMIT</span> Sort and cap <span class="tag">Basic</span></summary>
+    <details id="sql-order-by-limit" class="lesson"><summary><span class="caret">▸</span><span class="fn">ORDER BY / LIMIT</span> Sort and cap <span class="tag">Basic</span></summary>
     <div class="body">
       <p>Sort by a column (<code>DESC</code> for high-to-low, <code>ASC</code> for low-to-high) and keep just the top few with <code>LIMIT</code>.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT customer, site_code, revenue
@@ -142,7 +182,7 @@ LIMIT 3;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">DISTINCT</span> Unique values <span class="tag">Basic</span></summary>
+    <details id="sql-distinct" class="lesson"><summary><span class="caret">▸</span><span class="fn">DISTINCT</span> Unique values <span class="tag">Basic</span></summary>
     <div class="body">
       <p>Remove duplicates so each value appears once — handy for "what values exist in this column?".</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT DISTINCT country
@@ -162,7 +202,7 @@ FROM orders;</span></div>
   <!-- ===================== INTERMEDIATE ===================== -->
   <div data-tier-panel="s" data-tier="inter" class="tier-panel">
 
-    <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">Aggregates + GROUP BY</span> Summarise <span class="tag">Intermediate</span></summary>
+    <details id="sql-aggregates-group-by" class="lesson" open><summary><span class="caret">▸</span><span class="fn">Aggregates + GROUP BY</span> Summarise <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p><code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code> and <code>MAX</code> collapse many rows into one. <code>GROUP BY</code> does it per category, and <code>AS</code> renames the output column.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT region,
@@ -185,7 +225,7 @@ ORDER BY orders DESC;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">HAVING</span> Filter groups <span class="tag">Intermediate</span></summary>
+    <details id="sql-having" class="lesson"><summary><span class="caret">▸</span><span class="fn">HAVING</span> Filter groups <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p><code>WHERE</code> filters rows <em>before</em> grouping; <code>HAVING</code> filters the groups <em>after</em>.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT dpm, COUNT(*) AS orders
@@ -206,7 +246,7 @@ ORDER BY orders DESC;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">JOIN</span> Combine tables <span class="tag">Intermediate</span></summary>
+    <details id="sql-join" class="lesson"><summary><span class="caret">▸</span><span class="fn">JOIN</span> Combine tables <span class="tag">Intermediate</span></summary>
     <div class="body">
       <p>Match rows from two tables on a shared key. Here we compare each region's actual revenue to its target from the <code>targets</code> table.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT o.region,
@@ -236,7 +276,7 @@ GROUP BY o.region;</span></div>
   <!-- ===================== ADVANCED ===================== -->
   <div data-tier-panel="s" data-tier="adv" class="tier-panel">
 
-    <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">CASE</span> If-then logic in a column <span class="tag">Advanced</span></summary>
+    <details id="sql-case" class="lesson" open><summary><span class="caret">▸</span><span class="fn">CASE</span> If-then logic in a column <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>Bucket rows into categories on the fly, then group by the result.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT CASE WHEN revenue >= 30000 THEN 'large'
@@ -257,7 +297,7 @@ GROUP BY bucket;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Subquery</span> A query inside a query <span class="tag">Advanced</span></summary>
+    <details id="sql-subquery" class="lesson"><summary><span class="caret">▸</span><span class="fn">Subquery</span> A query inside a query <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>Use the result of one query inside another. Here: orders above the overall average revenue.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT customer, site_code, revenue
@@ -275,7 +315,7 @@ ORDER BY revenue DESC;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">CTE (WITH)</span> Name a step for readability <span class="tag">Advanced</span></summary>
+    <details id="sql-cte-with" class="lesson"><summary><span class="caret">▸</span><span class="fn">CTE (WITH)</span> Name a step for readability <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>A common table expression is a named temporary result you can build on — cleaner than nesting subqueries.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">WITH region_rev AS (
@@ -302,7 +342,7 @@ ORDER BY n DESC;</span></div>
       </div>
     </div></details>
 
-    <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Window functions</span> Rank without collapsing rows <span class="tag">Advanced</span></summary>
+    <details id="sql-window-functions" class="lesson"><summary><span class="caret">▸</span><span class="fn">Window functions</span> Rank without collapsing rows <span class="tag">Advanced</span></summary>
     <div class="body">
       <p>Aggregate <em>across</em> rows while keeping every row. <code>RANK() OVER (...)</code> ranks each order by revenue within its region.</p>
       <div class="code"><button class="copy">Copy</button><span class="code-text">SELECT region, customer, revenue,
@@ -327,9 +367,9 @@ LIMIT 15;</span></div>
 </div></section>
 
 <!-- GOOD HABITS -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="good-habits"><div class="wrap">
   <span class="eyebrow">Good habits</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .35em">A few things that trip people up</h2>
+  <h2>A few things that trip people up</h2>
   <div class="deflist">
     <div class="d"><b>Single vs double quotes</b> — text values use <code>'single quotes'</code>. Double quotes are for identifiers (column/table names), not strings.</div>
     <div class="d"><b>= vs LIKE</b> — <code>=</code> is exact. For partial matches use <code>LIKE 'SD-WAN%'</code> (<code>%</code> = any characters, <code>_</code> = one character).</div>
@@ -342,7 +382,7 @@ LIMIT 15;</span></div>
 <!-- PLAYGROUND -->
 <section id="runner"><div class="wrap">
   <span class="eyebrow">Try it for real</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .35em">SQL runner</h2>
+  <h2>SQL runner</h2>
   <p class="lead" style="max-width:70ch">A full SQLite engine, running entirely in your browser. Write a query and hit Run — or load an example to start. Tip: <kbd>Ctrl/Cmd + Enter</kbd> runs.</p>
 
   <div class="play" id="sql-play">
@@ -374,9 +414,9 @@ ORDER BY total_rev DESC;</textarea>
 </div></section>
 
 <!-- EXAM -->
-<section style="background:var(--surface-2)"><div class="wrap">
+<section style="background:var(--surface-2)" id="exam"><div class="wrap">
   <span class="eyebrow">Test yourself</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .35em">SQL final exam</h2>
+  <h2>SQL final exam</h2>
   <p class="lead" style="max-width:70ch">A fresh, randomised mix every time — including questions where you <b>write the query yourself</b> and we run it against the live tables and grade the result. Treat it as a checkpoint, then go run more queries above.</p>
   <div class="exam" data-bank="sqlBank" data-count="9" data-typed="3"></div>
 </div></section>
@@ -408,9 +448,24 @@ ORDER BY total_rev DESC;</textarea>
 ]
 </script>
 
-<footer class="foot"><div class="wrap">
-  <p>SQL track · DPM Learning Hub. The data here is fictional and runs entirely in your browser. <a href="data-foundations.html">← Foundations</a> · <a href="powerbi.html">On to Power BI →</a></p>
+<!-- shell:footer -->
+<section class="pager-sec"><div class="wrap"><nav class="pager" aria-label="Tracks"><a class="prev" href="excel.html"><small>← Previous track</small><b>Excel</b></a><a class="next" href="powerbi.html"><small>Next track →</small><b>Power BI</b></a></nav></div></section>
+</main>
+<div class="toc" data-toc hidden></div>
+<button class="to-top" type="button" aria-label="Back to top">↑</button>
+<footer class="site-footer"><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="11" width="4" height="7" rx="1.3" fill="#FF9A4D"/><rect x="8" y="6.5" width="4" height="11.5" rx="1.3" fill="#B9A0FF"/><rect x="14" y="2" width="4" height="16" rx="1.3" fill="#4FD1EA"/></svg></span>DPM Learning Hub</a>
+      <p style="max-width:40ch;margin-top:14px">A free, self-paced data analytics academy for Delivery Project Managers — and anyone who wants to get fluent with data.</p>
+    </div>
+    <div><h4>Learn</h4><ul><li><a href="data-foundations.html">Foundations</a></li><li><a href="excel.html">Excel</a></li><li><a href="sql.html">SQL</a></li><li><a href="powerbi.html">Power BI</a></li><li><a href="powerautomate.html">Power Automate</a></li></ul></div>
+    <div><h4>Practise</h4><ul><li><a href="dashboard.html">Live Dashboard</a></li><li><a href="excel.html#runner">Excel formula runner</a></li><li><a href="sql.html#runner">SQL runner</a></li><li><a href="powerbi.html#runner">DAX checker</a></li></ul></div>
+    <div><h4>Resources</h4><ul><li><a href="downloads.html">Cheat sheets</a></li><li><a href="downloads.html#sample-data">Practice datasets</a></li><li><a href="courses.html">Courses &amp; certifications</a></li><li><a href="index.html#plan">Study plan</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>All sample data is fictional and for training only.</span><span>Press <kbd>/</kbd> to search · progress is stored only in your browser</span></div>
 </div></footer>
+<!-- /shell:footer -->
 
 <script src="assets/js/sample-data.js"></script>
 <script src="assets/vendor/sql-wasm.js"></script>
