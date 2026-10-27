@@ -3,298 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DPM Learning Hub — Excel · Power BI · Power Automate</title>
+<title>Power Automate — DPM Learning Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
-<style>
-  /* learning path timeline */
-  .roadmap{margin-top:28px}
-  .stage{position:relative;padding:0 0 26px 70px}
-  .stage::before{content:"";position:absolute;left:23px;top:10px;bottom:-6px;width:2px;background:var(--line)}
-  .stage:last-child::before{display:none}
-  .stage .node{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 1.1rem/1 "Bricolage Grotesque",sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.18)}
-  .stage .shead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .stage h3{margin:2px 0;font-size:1.2rem}
-  .stage .stime{font:600 .7rem/1 "JetBrains Mono",monospace;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 9px;white-space:nowrap}
-  .stage p{margin:.35em 0}
-  .stage .connects{color:var(--ink-soft);font-size:.95rem}
-  .stage .links{margin-top:10px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.9rem}
-  .stage .links a{font-weight:600}
-  .stage .mile{color:var(--muted)}
-  .stage .mile b{color:inherit;font-weight:700}
-  /* integration pipeline */
-  .pipeline{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:8px}
-  .pl{flex:1 1 130px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;font-weight:700}
-  .pl small{display:block;color:var(--muted);font-weight:500;margin-top:5px;font-size:.78rem}
-  .pl-arr{align-self:center;color:var(--accent);font-weight:800;font-size:1.1rem}
-  .pl-base{margin-top:10px;background:var(--accent);color:#fff;border-radius:12px;padding:11px 14px;text-align:center;font-weight:700}
-  /* study plan */
-  .plan td:first-child{white-space:nowrap;font-weight:700}
-  .pace{display:flex;gap:10px;flex-wrap:wrap;margin:2px 0 18px}
-  .pace .pill{cursor:default}
-  /* at-a-glance horizontal timeline */
-  .phaseline{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:18px 0 28px}
-  .phase{flex:1 1 120px;border:1px solid var(--line);border-top:3px solid var(--c);border-radius:12px;padding:12px 10px;background:var(--surface);text-align:center;display:flex;flex-direction:column;gap:4px}
-  .phase .pn{width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;font:800 .8rem/24px "Bricolage Grotesque",sans-serif;margin:0 auto}
-  .phase b{font-size:.95rem}
-  .phase small{color:var(--muted);font:600 .72rem/1 "JetBrains Mono",monospace}
-  .phase-arr{align-self:center;color:var(--accent);font-weight:800;font-size:1.05rem}
-</style>
 </head>
-<body data-theme="hub">
+<body data-theme="flow">
 <div class="scrollbar"></div>
 
 <nav class="nav"><div class="wrap">
   <a class="brand" href="index.html"><span class="dot"></span> DPM Learning Hub</a>
   <button class="menu-btn" aria-label="Menu">☰</button>
   <div class="nav-links">
-    <a href="index.html" aria-current="page">Home</a>
+    <a href="index.html">Home</a>
     <a href="data-foundations.html">Foundations</a>
     <a href="excel.html">Excel</a>
     <a href="sql.html">SQL</a>
     <a href="powerbi.html">Power BI</a>
-    <a href="powerautomate.html">Power Automate</a>
+    <a href="powerautomate.html" aria-current="page">Power Automate</a>
     <a href="courses.html">Courses</a>
     <a href="downloads.html">Downloads</a>
   </div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <span class="tool-badge"><span class="glyph">DPM</span> Built for the Delivery PM team</span>
-  <h1>Go from spreadsheets<br>to dashboards to<br>automations.</h1>
-  <p class="lead">A self-paced hub for new DPMs. Learn the tools we actually use — Excel, Power BI, and Power Automate — with worked examples on real delivery data, hands-on prompts, and answer keys you can check yourself. No prior experience assumed.</p>
-  <div class="pills" style="margin-top:22px">
-    <span class="pill">Worked examples</span>
-    <span class="pill">Practice prompts + answer keys</span>
-    <span class="pill">Downloadable sample data</span>
-    <span class="pill">Self-check quizzes</span>
-  </div>
+  <span class="tool-badge"><span class="glyph">⚡</span> Microsoft Power Automate</span>
+  <h1>Let the repetitive<br>work run itself.</h1>
+  <p class="lead">Power Automate builds flows: "when <em>this</em> happens, do <em>that</em>." Notify a channel when an order changes, email a weekly summary, file an attachment, or drive a legacy portal that has no API. This track explains every building block, then hands you flows to design — with the correct flow as the answer key.</p>
+  <p class="hint" style="color:var(--muted);font-size:.9rem;margin-top:14px">Open <strong>make.powerautomate.com</strong> with your work account to follow along. No data download needed — the exercises are design challenges.</p>
 </div></header>
 
+<!-- DOWNLOAD -->
 <section><div class="wrap">
-  <span class="eyebrow">Four tracks</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .1em">Pick where you want to start</h2>
-  <p class="lead" style="margin-bottom:26px">Each track follows its tool's own look and builds from basics to advanced. Work top to bottom, or jump to what you need.</p>
-
-  <div class="grid cols-2">
-    <a class="card tool-card" href="data-foundations.html">
-      <span class="chip" style="background:#6D28D9">01 · Foundations</span>
-      <h3>Understand the data first</h3>
-      <p>Tables, keys and relationships, how databases store rows in pages, ER &amp; EER diagrams, star vs snowflake schemas, and OLAP — the groundwork that makes everything else click.</p>
-      <span class="arrow">→</span>
-    </a>
-    <a class="card tool-card" href="excel.html">
-      <span class="chip" style="background:#217346">02 · Excel</span>
-      <h3>Excel foundations &amp; power moves</h3>
-      <p>Functions from <span class="mono">SUM</span> to <span class="mono">LAMBDA</span>, lookups, PivotTables, getting data from the web, and Power Query for repeatable cleaning.</p>
-      <span class="arrow">→</span>
-    </a>
-    <a class="card tool-card" href="sql.html">
-      <span class="chip" style="background:#0E7490">03 · SQL</span>
-      <h3>Ask your data questions directly</h3>
-      <p>SELECT, WHERE, GROUP BY, JOINs and beyond — taught in five levels, with a full SQLite engine in the browser so you can run and be graded on real queries.</p>
-      <span class="arrow">→</span>
-    </a>
-    <a class="card tool-card" href="powerbi.html">
-      <span class="chip" style="background:#1a1a1a;color:#F2C811">04 · Power BI</span>
-      <h3>From data to dashboards</h3>
-      <p>Load &amp; shape data, model relationships, write DAX measures, and choose the right chart — knowing when each one helps and when it misleads.</p>
-      <span class="arrow">→</span>
-    </a>
-    <a class="card tool-card" href="powerautomate.html">
-      <span class="chip" style="background:#0066FF">05 · Power Automate</span>
-      <h3>Automate the repetitive work</h3>
-      <p>Triggers, actions, conditions, loops and expressions explained — then design your own flows and check them against a worked answer key.</p>
-      <span class="arrow">→</span>
-    </a>
-    <a class="card tool-card" href="courses.html">
-      <span class="chip" style="background:#FF7900">06 · Courses</span>
-      <h3>Keep going further</h3>
-      <p>Free Microsoft Learn paths, the certifications worth having, and the best free video channels to deepen each skill.</p>
-      <span class="arrow">→</span>
-    </a>
+  <div class="card" style="border-left:4px solid var(--accent);display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <div style="flex:1 1 340px">
+      <h3 style="margin:0 0 .3em">Grab the printable cheat sheet</h3>
+      <p style="margin:0;color:var(--ink-soft)">A dense, two-page Power Automate reference — flow types, controls, and the expression functions you'll reach for most (triggerBody, items, formatDateTime, OData filters) — in the style of the classic R/RStudio cards.</p>
+    </div>
+    <a class="btn" href="assets/docs/Power-Automate-Cheat-Sheet.pdf" download>⬇ Download cheat sheet (PDF)</a>
   </div>
 </div></section>
 
-<!-- LEARNING PATH -->
+<!-- WHAT IS IT -->
+<section><div class="wrap">
+  <span class="eyebrow">Orientation</span>
+  <h2 style="font-size:2rem;margin:.2em 0 .3em">The one idea behind every flow</h2>
+  <p class="lead">A flow is a <strong>trigger</strong> followed by one or more <strong>actions</strong>. The trigger is the "when"; the actions are the "then". Everything else — conditions, loops, variables — just makes the "then" smarter.</p>
+  <div class="flow" style="max-width:560px">
+    <div class="step"><b>TRIGGER</b> When a new email arrives with "GOLD order" in the subject</div><div class="conn"></div>
+    <div class="step"><b>ACTION</b> Post a message to the Delivery Teams channel</div><div class="conn"></div>
+    <div class="step"><b>ACTION</b> Add a row to the tracking spreadsheet</div>
+  </div>
+</div></section>
+
+<!-- FLOW TYPES -->
 <section style="background:var(--surface-2)"><div class="wrap">
-  <span class="eyebrow">The recommended path</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .1em">What to learn, and in what order</h2>
-  <p class="lead" style="margin-bottom:8px">You <em>can</em> jump around, but each track is designed to stand on the one before it. Follow the path top to bottom and every new idea lands on something you already know. Plan for roughly <strong>30 hours</strong> of focused study in total.</p>
-
-  <div class="phaseline">
-    <div class="phase" style="--c:#6D28D9"><span class="pn">1</span><b>Foundations</b><small>2–3 hrs</small></div>
-    <span class="phase-arr">→</span>
-    <div class="phase" style="--c:#217346"><span class="pn">2</span><b>Excel</b><small>6–8 hrs</small></div>
-    <span class="phase-arr">→</span>
-    <div class="phase" style="--c:#0E7490"><span class="pn">3</span><b>SQL</b><small>6–8 hrs</small></div>
-    <span class="phase-arr">→</span>
-    <div class="phase" style="--c:#1a1a1a"><span class="pn">4</span><b>Power BI</b><small>8–10 hrs</small></div>
-    <span class="phase-arr">→</span>
-    <div class="phase" style="--c:#0066FF"><span class="pn">5</span><b>Power Automate</b><small>4–6 hrs</small></div>
-  </div>
-
-  <div class="roadmap">
-
-    <div class="stage">
-      <span class="node" style="background:#6D28D9">1</span>
-      <div class="shead"><h3>Foundations</h3><span class="stime">≈ 2–3 hrs</span></div>
-      <p><b>Learn:</b> tables, keys &amp; relationships, how data is stored, ER/EER diagrams, star vs snowflake schemas, and OLAP (the cube — slice, dice, drill).</p>
-      <p class="connects"><b>Why first:</b> this is the vocabulary for everything else — relational thinking for SQL, the star schema and OLAP for Power BI, and the reason a PivotTable works the way it does.</p>
-      <div class="links"><a href="data-foundations.html">Open Foundations →</a> <span class="mile"><b>Checkpoint:</b> the self-check quizzes</span></div>
-    </div>
-
-    <div class="stage">
-      <span class="node" style="background:#217346">2</span>
-      <div class="shead"><h3>Excel</h3><span class="stime">≈ 6–8 hrs</span></div>
-      <p><b>Learn:</b> references and the <span class="mono">$</span> lock, conditional aggregation (SUMIFS/COUNTIFS), lookups (XLOOKUP, INDEX/MATCH), PivotTables, and Power Query cleaning.</p>
-      <p class="connects"><b>Builds on Foundations:</b> a PivotTable is OLAP on your desktop — rows &amp; columns are dimensions, values are measures. The Power Query you learn here is the <em>same</em> engine you'll use in Power BI.</p>
-      <div class="links"><a href="excel.html">Open Excel →</a> <span class="mile"><b>Milestone:</b> pass the Excel exam · keep the cheat sheet</span></div>
-    </div>
-
-    <div class="stage">
-      <span class="node" style="background:#0E7490">3</span>
-      <div class="shead"><h3>SQL</h3><span class="stime">≈ 6–8 hrs</span></div>
-      <p><b>Learn:</b> SELECT / WHERE / ORDER BY, GROUP BY &amp; HAVING, JOINs, subqueries, CTEs and window functions — run live against a real database in your browser.</p>
-      <p class="connects"><b>Connects:</b> <span class="mono">GROUP BY</span> is the PivotTable idea written in code, and the relational model from Foundations made real. Clean query results become the source you load into Power BI.</p>
-      <div class="links"><a href="sql.html">Open SQL →</a> <span class="mile"><b>Milestone:</b> pass the SQL exam · keep the cheat sheet</span></div>
-    </div>
-
-    <div class="stage">
-      <span class="node" style="background:#1a1a1a;color:#F2C811">4</span>
-      <div class="shead"><h3>Power BI</h3><span class="stime">≈ 8–10 hrs</span></div>
-      <p><b>Learn:</b> get &amp; shape data (Power Query), model it as a star schema, write DAX measures, and choose the right visual for the question.</p>
-      <p class="connects"><b>Pulls it all together:</b> it stacks Power Query (Excel), the star schema &amp; OLAP (Foundations) and data you can pull with SQL into interactive dashboards. This is where the earlier tracks pay off.</p>
-      <div class="links"><a href="powerbi.html">Open Power BI →</a> <span class="mile"><b>Milestone:</b> pass the Power BI exam · keep the DAX cheat sheet</span></div>
-    </div>
-
-    <div class="stage">
-      <span class="node" style="background:#0066FF">5</span>
-      <div class="shead"><h3>Power Automate</h3><span class="stime">≈ 4–6 hrs</span></div>
-      <p><b>Learn:</b> triggers, actions, conditions, loops and expressions — then design flows of your own.</p>
-      <p class="connects"><b>Automates the rest:</b> once you can analyse, you automate the delivery — refresh and email a report, alert when a status changes, chase an approval. It removes the repetitive work around everything above.</p>
-      <div class="links"><a href="powerautomate.html">Open Power Automate →</a> <span class="mile"><b>Milestone:</b> pass the Power Automate exam · build one real flow</span></div>
-    </div>
-
-  </div>
-
-  <div class="note" style="margin-top:6px"><span class="ic">i</span><div>Two tracks support you the whole way: <a href="courses.html">Courses</a> for going deeper on any tool, and <a href="downloads.html">Downloads</a> for the printable cheat sheets to keep beside you while you practise.</div></div>
-</div></section>
-
-<!-- HOW THEY FIT TOGETHER -->
-<section><div class="wrap">
-  <span class="eyebrow">How it all connects</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Five tracks, one pipeline</h2>
-  <p class="lead">The tools aren't five separate skills — they're stages of the same workflow: get data, shape it, model it, show it, and automate it. Foundations sits underneath, explaining <em>why</em> each stage works.</p>
-
-  <div class="pipeline">
-    <div class="pl">Get the data<small>Excel · SQL</small></div>
-    <span class="pl-arr">→</span>
-    <div class="pl">Shape &amp; clean<small>Power Query</small></div>
-    <span class="pl-arr">→</span>
-    <div class="pl">Model &amp; measure<small>Power BI · DAX</small></div>
-    <span class="pl-arr">→</span>
-    <div class="pl">Visualise<small>Power BI</small></div>
-    <span class="pl-arr">→</span>
-    <div class="pl">Automate &amp; share<small>Power Automate</small></div>
-  </div>
-  <div class="pl-base">Foundations — the relational &amp; OLAP concepts beneath every stage</div>
-
-  <div class="note" style="margin-top:20px"><span class="ic">★</span><div><b>The thread that ties it together:</b> the same question — "<em>a measure</em> by <em>a dimension</em> by <em>a dimension</em>" (revenue by region by quarter) — is a <strong>PivotTable</strong> in Excel, a <strong>GROUP BY</strong> in SQL, and a <strong>visual on a star schema</strong> in Power BI. Learn it once in Foundations and you recognise it everywhere.</div></div>
-</div></section>
-
-<!-- STUDY PLAN -->
-<section><div class="wrap">
-  <span class="eyebrow">A study plan</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">If you want a schedule to follow</h2>
-  <p class="lead" style="margin-bottom:6px">No plan is required — the hub is self-paced. But if you like structure, here's a steady six-week plan at a few hours a week, with the exams as your checkpoints.</p>
-  <div class="pace">
-    <span class="pill">Steady: ~5 hrs/week · 6 weeks</span>
-    <span class="pill">Intensive: full-time · ~2 weeks</span>
-  </div>
-
-  <h3 style="margin:18px 0 8px">Steady — about 5 hours a week for 6 weeks</h3>
-  <table class="tbl plan">
-    <thead><tr><th>Week</th><th>Focus</th><th>Milestone by the end</th></tr></thead>
-    <tbody>
-      <tr><td>Week 1</td><td>Foundations in full, then start Excel (references, conditional aggregation).</td><td>Comfortable with tables, keys &amp; OLAP; Excel basics clicking.</td></tr>
-      <tr><td>Week 2</td><td>Finish Excel: lookups, PivotTables, Power Query.</td><td>Pass the <a href="excel.html">Excel</a> exam.</td></tr>
-      <tr><td>Week 3</td><td>SQL basics → intermediate: SELECT, WHERE, GROUP BY, JOINs (run every query).</td><td>Confident reading &amp; summarising data in SQL.</td></tr>
-      <tr><td>Week 4</td><td>SQL advanced: subqueries, CTEs, window functions.</td><td>Pass the <a href="sql.html">SQL</a> exam.</td></tr>
-      <tr><td>Week 5</td><td>Power BI: shape, model a star schema, DAX measures, choose visuals.</td><td>Pass the <a href="powerbi.html">Power BI</a> exam; build one small dashboard.</td></tr>
-      <tr><td>Week 6</td><td>Power Automate + consolidate everything on the sample data.</td><td>Pass the <a href="powerautomate.html">Power Automate</a> exam; build one real flow.</td></tr>
-    </tbody>
-  </table>
-  <h3 style="margin:26px 0 8px">Intensive — about two weeks full-time</h3>
-  <table class="tbl plan">
-    <thead><tr><th>Day</th><th>Focus</th><th>Milestone by the end</th></tr></thead>
-    <tbody>
-      <tr><td>Days 1–2</td><td>Foundations in full, then begin Excel (references, conditional aggregation).</td><td>Relational &amp; OLAP ideas solid; Excel underway.</td></tr>
-      <tr><td>Day 3</td><td>Finish Excel: lookups, PivotTables, Power Query.</td><td>Pass the <a href="excel.html">Excel</a> exam.</td></tr>
-      <tr><td>Days 4–5</td><td>SQL: SELECT → WHERE → GROUP BY → JOINs, running every query.</td><td>Confident querying the sample data.</td></tr>
-      <tr><td>Day 6</td><td>SQL advanced: subqueries, CTEs, window functions.</td><td>Pass the <a href="sql.html">SQL</a> exam.</td></tr>
-      <tr><td>Days 7–8</td><td>Power BI: shape, model a star schema, write DAX, choose visuals.</td><td>Pass the <a href="powerbi.html">Power BI</a> exam; build a small dashboard.</td></tr>
-      <tr><td>Day 9</td><td>Power Automate: triggers, actions, conditions and expressions.</td><td>Pass the <a href="powerautomate.html">Power Automate</a> exam.</td></tr>
-      <tr><td>Day 10</td><td>End-to-end mini-project on the sample data: query → model → dashboard → an automated alert.</td><td>One project that uses all five tracks together.</td></tr>
-    </tbody>
-  </table>
-  <p class="hint" style="color:var(--muted);font-size:.9rem;margin-top:10px">Pick whichever pace fits — the content is identical, only the calendar changes. The exams are your checkpoints either way.</p>
-
-  <h3 style="margin:26px 0 10px">Five habits that make it stick</h3>
+  <span class="eyebrow">The four flow types</span>
+  <h2 style="font-size:2rem;margin:.2em 0 .3em">Pick the right starting point</h2>
   <div class="grid cols-2">
-    <div class="card"><h3>Treat the exam as a checkpoint</h3><p>Don't move on until you can pass a track's exam comfortably. It reshuffles each attempt, so retake it until the score is reliable, not lucky.</p></div>
-    <div class="card"><h3>Always attempt the <em>Try it</em> first</h3><p>Have a real go before you reveal the answer. The few minutes of being stuck are where the learning actually happens.</p></div>
-    <div class="card"><h3>Keep the cheat sheet open</h3><p>Download the track's cheat sheet and have it beside you while you practise — recall comes from use, not memorising.</p></div>
-    <div class="card"><h3>Use the one dataset throughout</h3><p>Answering the same questions in Excel, SQL and Power BI is what reveals how the tools connect — and makes each new one faster to learn.</p></div>
+    <div class="card"><h3>⚡ Automated cloud flow</h3><p>Starts on its own when an event happens — an email arrives, a list item changes, a file lands in SharePoint. <em>The most common type.</em></p><p class="hint" style="color:var(--muted);font-size:.88rem">Trigger example: <span class="mono">When a new email arrives (V3)</span></p></div>
+    <div class="card"><h3>👆 Instant cloud flow</h3><p>You start it on demand — a button in the app, or from a Teams/Power Apps action. Can ask you for inputs first.</p><p class="hint" style="color:var(--muted);font-size:.88rem">Trigger: <span class="mono">Manually trigger a flow</span></p></div>
+    <div class="card"><h3>⏰ Scheduled cloud flow</h3><p>Runs on a clock — every Monday 8am, every hour, the 1st of the month. Built on the <span class="mono">Recurrence</span> trigger.</p><p class="hint" style="color:var(--muted);font-size:.88rem">Trigger: <span class="mono">Recurrence</span></p></div>
+    <div class="card"><h3>🖥 Desktop flow (RPA)</h3><p>Automates the <em>screen</em> — clicking buttons, typing into fields, reading a legacy web portal that has no connector. Runs in Power Automate Desktop.</p><p class="hint" style="color:var(--muted);font-size:.88rem">For apps with no API — e.g. driving GOLD in a browser</p></div>
   </div>
-  <div class="note" style="margin-top:16px"><span class="ic">i</span><div>Stuck on a tool concept that feels abstract? Jump back to <a href="data-foundations.html">Foundations</a> — most confusion in the tools traces back to a modelling idea explained there.</div></div>
+  <div class="note"><span class="ic">i</span><div><strong>Cloud vs Desktop:</strong> if there's a connector or API, stay in the cloud — it's more reliable. Reach for a desktop flow only when you must mimic a human clicking through an interface.</div></div>
 </div></section>
 
+<!-- ELEMENTS -->
+<section><div class="wrap">
+  <span class="eyebrow">The building blocks</span>
+  <h2 style="font-size:2rem;margin:.2em 0 .3em">Every element, explained</h2>
+  <p class="lead">These are the pieces you drag together inside a flow, grouped into <strong>three levels</strong> — tap a card to switch. Learn what each is for and you can build almost anything. Remember the spine: a <strong>trigger</strong> (the "when") followed by <strong>actions</strong> (the "then").</p>
+
+  <div class="tiers" data-tiers="f" role="tablist">
+    <button class="tier-btn" data-tier="basic" aria-selected="true" role="tab"><span class="lvl">1</span><span class="tier-txt"><b>Basics</b><small>Trigger, action, connector, data</small></span></button>
+    <button class="tier-btn" data-tier="logic" aria-selected="false" role="tab"><span class="lvl">2</span><span class="tier-txt"><b>Logic</b><small>Conditions, loops, variables</small></span></button>
+    <button class="tier-btn" data-tier="adv" aria-selected="false" role="tab"><span class="lvl">3</span><span class="tier-txt"><b>Advanced</b><small>Expressions &amp; approvals</small></span></button>
+  </div>
+
+  <div data-tier-panel="f" data-tier="basic" class="tier-panel active">
+
+  <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">Trigger</span> The "when" <span class="tag">Core</span></summary>
+  <div class="body"><p>The event that starts the flow. Exactly one per flow. Choosing it well matters: <span class="mono">When an item is created</span> vs <span class="mono">created or modified</span> changes everything downstream. Many triggers have filters (e.g. only emails with a certain subject) — use them to avoid firing on everything.</p></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Action</span> The "then" <span class="tag">Core</span></summary>
+  <div class="body"><p>A single step the flow performs: send an email, create a file, post to Teams, add a spreadsheet row, call an API. Actions run top to bottom; each can use outputs from the steps above it.</p></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Connector</span> The app it talks to <span class="tag">Core</span></summary>
+  <div class="body"><p>A bundle of triggers and actions for one service — Outlook, Teams, SharePoint, Excel Online, Planner, Approvals, Dataverse. Hundreds exist. <em>Premium</em> connectors (e.g. HTTP, SQL, custom) need the right licence.</p></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Dynamic content</span> Passing data between steps <span class="tag">Core</span></summary>
+  <div class="body"><p>The output of one step, dropped into a later one — the email's subject, the new item's ID, the file name. This is the wiring that makes a flow more than a list of unrelated actions.</p>
+  <div class="note"><span class="ic">i</span><div>If the dynamic value you need isn't offered, it's usually because the step that produces it is <em>below</em> the one you're editing, or inside a different branch.</div></div></div></details>
+
+  </div>
+
+  <div data-tier-panel="f" data-tier="logic" class="tier-panel">
+
+  <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">Condition</span> If / else <span class="tag">Logic</span></summary>
+  <div class="body"><p>Splits the flow into a <strong>Yes</strong> branch and a <strong>No</strong> branch based on a test (Priority is equal to "High"). Put the steps for each outcome in the matching branch.</p>
+  <div class="code"><button class="copy">Copy</button><span class="code-text">Condition:  Priority   is equal to   High
+   ├─ If yes →  send the manager an alert
+   └─ If no  →  just add a log row</span></div></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Switch</span> Many branches at once <span class="tag">Logic</span></summary>
+  <div class="body"><p>Like a Condition but for several known values — branch on Status = Delivered / In Progress / On Hold, each with its own steps, plus a default. Cleaner than nesting many Conditions.</p></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Apply to each</span> Loop over a list <span class="tag">Logic</span></summary>
+  <div class="body"><p>When a step returns <em>multiple</em> items (rows from Excel, emails, list items), <strong>Apply to each</strong> runs its inner actions once per item. Power Automate often adds it for you the moment you use an array output.</p>
+  <div class="note warn"><span class="ic">!</span><div>Loops can be slow over big lists. Filter the data <em>before</em> the loop, and turn on concurrency in the loop's settings when order doesn't matter.</div></div></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Do until</span> Loop until true <span class="tag">Logic</span></summary>
+  <div class="body"><p>Repeats until a condition is met (e.g. keep polling a status until it reads "Complete"). Always set a sensible count/timeout limit so it can't run forever.</p></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Variables</span> Remember a value <span class="tag">Logic</span></summary>
+  <div class="body"><p>Initialise a variable once (at the top), then Set / Increment / Append to it as the flow runs — a running total, a counter, or a built-up HTML string.</p>
+  <div class="code"><button class="copy">Copy</button><span class="code-text">Initialize variable   →  name: TotalRevenue,  type: Float,  value: 0
+   (inside Apply to each)
+Increment variable    →  TotalRevenue  by  items('Apply_to_each')?['Revenue']</span></div></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Scope &amp; parallel branch</span> Group and split <span class="tag">Logic</span></summary>
+  <div class="body"><p><strong>Scope</strong> groups several actions into one block — useful for a single "try" you can wrap error handling around (set the next Scope to run only <em>if the previous failed</em>). A <strong>parallel branch</strong> runs two paths at the same time.</p></div></details>
+
+  </div>
+
+  <div data-tier-panel="f" data-tier="adv" class="tier-panel">
+
+  <details class="lesson" open><summary><span class="caret">▸</span><span class="fn">Expressions</span> Functions for the tricky bits <span class="tag">Advanced</span></summary>
+  <div class="body"><p>When dynamic content isn't enough, write an expression in the formula box. Common ones:</p>
+  <div class="code"><button class="copy">Copy</button><span class="code-text">utcNow()                          // current timestamp
+formatDateTime(utcNow(),'dd/MM/yyyy')
+addDays(utcNow(), 7)              // a week from now
+concat('Order ', triggerBody()?['Subject'])
+if(equals(item()?['Priority'],'High'), 'Escalate', 'Log')
+length(body('List_rows')?['value'])   // how many rows came back</span></div></div></details>
+
+  <details class="lesson"><summary><span class="caret">▸</span><span class="fn">Approvals</span> Get a human yes/no <span class="tag">Action</span></summary>
+  <div class="body"><p>The <strong>Start and wait for an approval</strong> action pauses the flow, emails an approver, and continues based on their response — perfect for sign-off on an escalation or a change window.</p></div></details>
+
+  </div>
+</div></section>
+
+<!-- DESIGN CHALLENGES -->
 <section style="background:var(--surface-2)"><div class="wrap">
-  <div class="grid cols-2" style="align-items:center;gap:40px">
-    <div>
-      <span class="eyebrow">One dataset, everywhere</span>
-      <h2 style="font-size:2rem;margin:.2em 0 .3em">Practice on delivery data that looks like ours</h2>
-      <p>Every track uses the same fictional dataset: 72 delivery orders across customers like SKF and Harman, with sites, regions, service types, statuses, dates, FTE days and revenue. Download it once and use it for every exercise.</p>
-      <p>There's also a deliberately <strong>messy</strong> copy — inconsistent text, missing values, European decimals and text dates — for the Power Query cleaning practice.</p>
-      <div class="pills" style="margin:18px 0">
-        <a class="dl" href="assets/data/dpm_projects.xlsx" download>⬇ Sample workbook (.xlsx)</a>
-        <a class="dl ghost" href="assets/data/dpm_projects.csv" download>⬇ CSV</a>
-        <a class="dl ghost" href="assets/data/dpm_messy_data.csv" download>⬇ Messy CSV</a>
+  <span class="eyebrow">Design challenges</span>
+  <h2 style="font-size:2rem;margin:.2em 0 .3em">Build the flow, then check the key</h2>
+  <p class="lead">For each scenario, sketch the flow on paper or in the designer — which flow type, which trigger, which actions, in what order. Then reveal the worked answer.</p>
+
+  <div class="try"><p class="q">Challenge 1 — Notify &amp; log new orders</p>
+    <p>Whenever an email arrives in the shared Delivery mailbox with <em>"GOLD order"</em> in the subject, post a heads-up in the Delivery Teams channel and add a row to the order-tracking spreadsheet.</p>
+    <p class="hint">Hint: which flow type starts "whenever an email arrives"?</p>
+    <details class="reveal"><summary>Show answer flow</summary><div class="ans">
+      <p><strong>Automated cloud flow.</strong></p>
+      <div class="flow">
+        <div class="step"><b>TRIGGER · Outlook</b> When a new email arrives (V3) — folder: Delivery; Subject Filter: <span class="mono">GOLD order</span></div><div class="conn"></div>
+        <div class="step"><b>ACTION · Teams</b> Post message in a chat or channel → channel "Delivery", message uses dynamic <em>From</em> and <em>Subject</em></div><div class="conn"></div>
+        <div class="step"><b>ACTION · Excel Online</b> Add a row into a table → map Subject, Received time, From</div>
       </div>
-    </div>
-    <div class="card">
-      <table class="tbl" style="margin:0">
-        <thead><tr><th>Order ID</th><th>Customer</th><th>Service</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td class="mono">10-1735&hellip;</td><td>SKF Industrial</td><td>LAN Refresh</td><td>Delivered</td></tr>
-          <tr><td class="mono">10-1736&hellip;</td><td>Harman Intl</td><td>Wireless Migration</td><td>In Progress</td></tr>
-          <tr><td class="mono">10-1737&hellip;</td><td>Network Intl</td><td>SD-WAN Migration</td><td>Staging</td></tr>
-          <tr><td class="mono">10-1738&hellip;</td><td>Volvo Group</td><td>MPLS Service Order</td><td>On Hold</td></tr>
-        </tbody>
-      </table>
-      <p class="hint" style="color:var(--muted);font-size:.85rem;margin:.6em 0 0">17 columns · 72 rows · fictional, for training only</p>
-    </div>
+      <p>The subject filter on the trigger means the flow never fires on unrelated mail — cheaper and cleaner than a Condition after the fact.</p>
+    </div></details>
+  </div>
+
+  <div class="try"><p class="q">Challenge 2 — Weekly "due this week" digest</p>
+    <p>Every Monday at 08:00, email yourself a list of orders whose Target Go-Live falls in the next 7 days, pulled from an Excel table.</p>
+    <p class="hint">Hint: a clock-based start, and the data comes back as a list.</p>
+    <details class="reveal"><summary>Show answer flow</summary><div class="ans">
+      <p><strong>Scheduled cloud flow.</strong></p>
+      <div class="flow">
+        <div class="step"><b>TRIGGER · Schedule</b> Recurrence → Weekly, Monday, 08:00</div><div class="conn"></div>
+        <div class="step"><b>ACTION · Excel Online</b> List rows present in a table → with a Filter Query on Target Go-Live within the next 7 days</div><div class="conn"></div>
+        <div class="step"><b>ACTION · Data ops</b> Create HTML table from the returned rows</div><div class="conn"></div>
+        <div class="step"><b>ACTION · Outlook</b> Send an email (V2) → to yourself, body = the HTML table</div>
+      </div>
+      <p>Filtering in the <em>List rows</em> step (rather than looping and checking each) keeps it fast. <strong>Create HTML table</strong> turns the array into a tidy email without an Apply to each.</p>
+    </div></details>
+  </div>
+
+  <div class="try"><p class="q">Challenge 3 — Escalate only the High-priority holds</p>
+    <p>When an order in a SharePoint list is changed to status <em>On Hold</em>: if its Priority is High, request approval from the Team Manager to escalate; otherwise just add a comment/log entry. Nothing should happen for other status changes.</p>
+    <p class="hint">Hint: you'll need a trigger filter <em>and</em> a branch.</p>
+    <details class="reveal"><summary>Show answer flow</summary><div class="ans">
+      <p><strong>Automated cloud flow</strong> with a trigger condition + a Condition control.</p>
+      <div class="flow">
+        <div class="step"><b>TRIGGER · SharePoint</b> When an item is created or modified → add a <em>trigger condition</em> so it only continues when Status = "On Hold"</div><div class="conn"></div>
+        <div class="step"><b>CONDITION</b> Priority is equal to High</div>
+      </div>
+      <div class="code"><button class="copy">Copy</button><span class="code-text">If YES →  Start and wait for an approval  (approver: Team Manager)
+          then  Update item  /  Send an email with the decision
+If NO  →  Add a comment / append a row to the log table</span></div>
+      <p>The <em>trigger condition</em> stops the flow from running on every edit; the Condition then routes by priority. Tip: also compare to the item's previous Status if you only want the moment it <em>becomes</em> On Hold.</p>
+    </div></details>
+  </div>
+
+  <div class="try"><p class="q">Challenge 4 — A legacy portal with no connector</p>
+    <p>You need to open the GOLD order portal in a browser, search an order number, copy its status, and paste it into an Excel sheet. There is no GOLD connector or API. How do you automate it?</p>
+    <p class="hint">Hint: this one isn't a cloud flow.</p>
+    <details class="reveal"><summary>Show answer flow</summary><div class="ans">
+      <p><strong>Desktop flow (RPA)</strong> in Power Automate Desktop — it automates the screen itself.</p>
+      <div class="flow">
+        <div class="step"><b>UI</b> Launch / attach to the browser → navigate to the GOLD URL</div><div class="conn"></div>
+        <div class="step"><b>UI</b> Populate text field with the order number → Press button (Search)</div><div class="conn"></div>
+        <div class="step"><b>UI</b> Extract data / Get details of element → read the status text into a variable</div><div class="conn"></div>
+        <div class="step"><b>Excel</b> Launch Excel → Write to cell → Save &amp; close</div>
+      </div>
+      <p>RPA is the right tool only because there's no API. It's more brittle than a cloud flow (a page redesign can break it), so add waits for elements to load and handle the "not found" case.</p>
+    </div></details>
   </div>
 </div></section>
 
+<!-- EXAM -->
 <section><div class="wrap">
-  <span class="eyebrow">How to use this hub</span>
-  <h2 style="font-size:2rem;margin:.2em 0 .3em">Learn by doing, then check yourself</h2>
-  <div class="grid cols-3">
-    <div class="card"><h3>1 · Read the worked example</h3><p>Each lesson explains the concept and shows it applied to the sample data, with the exact formula or step.</p></div>
-    <div class="card"><h3>2 · Try the prompt first</h3><p>Open the workbook and attempt the <em>Try it</em> task on your own before peeking. That struggle is where the learning sticks.</p></div>
-    <div class="card"><h3>3 · Reveal the answer key</h3><p>Click <em>Show answer</em> to compare your approach. If it differs but works — great, there's often more than one right way.</p></div>
-  </div>
+  <span class="eyebrow">Test yourself</span>
+  <h2 style="font-size:2rem;margin:.2em 0 .3em">Power Automate final exam</h2>
+  <p class="lead">Triggers, actions, conditions, loops, expressions and connectors — a fresh randomised set each time. Retake until it's second nature.</p>
+  <div class="exam" data-bank="flowBank" data-count="8"></div>
 </div></section>
+
+<script type="application/json" id="flowBank">
+[
+ {"q":"You want a flow that runs the first of every month. Which trigger?","opts":["Recurrence (scheduled)","When a new email arrives","Manually trigger a flow","When a file is created"],"correct":0,"why":"A clock-based schedule uses the Recurrence trigger — that's a scheduled cloud flow."},
+ {"q":"A step returns 20 rows and you want to act on each one. Power Automate will use…","opts":["Apply to each","A Condition","A Switch","A Do until"],"correct":0,"why":"Feeding an array into an action wraps it in an Apply to each loop to process every item."},
+ {"q":"The system you need to automate has no connector and no API. Best approach?","opts":["A desktop flow (RPA) that drives the UI","Force it with an automated cloud flow","It can't be automated","Email it manually"],"correct":0,"why":"With no API, Power Automate Desktop mimics a human clicking and typing — that's what RPA is for."},
+ {"q":"You want a flow to run only when an email subject contains 'GOLD order'. Cleanest way?","opts":["Use the trigger's subject filter / trigger condition","Fire on every email, then a Condition decides","Use a Do until loop","Run it on a schedule"],"correct":0,"why":"Filtering at the trigger means the flow never runs on irrelevant emails — fewer runs, simpler flow."},
+ {"q":"What's the difference between a <b>trigger</b> and an <b>action</b>?","opts":["A trigger starts the flow; actions are the steps it then runs","They're the same","Actions start the flow","Triggers only send email"],"correct":0,"why":"Every flow begins with exactly one trigger (the 'when'), followed by one or more actions (the 'do')."},
+ {"q":"You need different handling for High / Medium / Low priority. The tidiest control is…","opts":["A Switch on the priority value","Three nested Conditions","A Do until","An Apply to each"],"correct":0,"why":"Switch branches cleanly on one value's cases — clearer than deeply nested Conditions."},
+ {"q":"To pull a value from a previous step into a later one, you use…","opts":["Dynamic content / an expression","A manual copy-paste","A new trigger","A separate flow"],"correct":0,"why":"Dynamic content tokens (and expressions) reference outputs from earlier steps at run time."},
+ {"q":"A flow should wait until an order's status becomes 'Closed', checking periodically. Use…","opts":["Do until","Apply to each","Condition","Switch"],"correct":0,"why":"Do until repeats until a condition is met — ideal for polling a status with a delay inside."},
+ {"q":"You want a manager to approve a request inside the flow. The right action family is…","opts":["Approvals","Send an email only","Compose","Terminate"],"correct":0,"why":"The Approvals actions create an approve/reject task and pause the flow until a decision is returned."},
+ {"q":"What does a <b>Condition</b> action do?","opts":["Branches the flow into Yes / No paths based on a test","Loops over an array","Starts the flow","Formats text"],"correct":0,"why":"A Condition evaluates a true/false expression and runs the matching branch."},
+ {"q":"A <b>connector</b> in Power Automate is…","opts":["A pre-built bridge to a service (Outlook, SharePoint, SQL…)","A type of loop","A trigger condition","A desktop app"],"correct":0,"why":"Connectors package a service's triggers and actions so your flow can talk to it without code."},
+ {"q":"Best practice to stop a flow part-way when something's wrong?","opts":["Use a Terminate action with a status","Delete the flow","Let it error out","Add more delays"],"correct":0,"why":"Terminate ends the run with an explicit Succeeded/Failed status, making outcomes clear in run history."}
+]
+</script>
 
 <footer class="foot"><div class="wrap">
-  <p><strong>DPM Learning Hub</strong> · A training resource for the Delivery Project Management team.<br>
-  Sample data is fictional. Built to be hosted on GitHub Pages — drop the folder into your repo and it just works.</p>
+  <p>Power Automate track · DPM Learning Hub. Remember: trigger = when, actions = then, everything else makes the then smarter. <a href="courses.html">Next up: Courses →</a></p>
 </div></footer>
 
+<script src="assets/js/exam.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
